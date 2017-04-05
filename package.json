@@ -48,5 +48,8 @@
   "engines": {
     "node": ">= 4"
   },
-  "private": true
+  "private": true,
+  "dependencies": {
+    "font-awesome": "^4.7.0"
+  }
 }
