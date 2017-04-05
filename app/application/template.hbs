@@ -1,28 +1,41 @@
 <nav class="nav">
   <div class="nav-left">
-    <a href="#" class="nav-item">Logo</a>
+    <a href="/" class="nav-item">
+      {{#link-to "index"}}Logo{{/link-to}}
+    </a>
   </div>
 
   <div class="nav-right">
-    <a href="#" class="nav-item">About</a>
-    <a href="#" class="nav-item">Login</a>
+    <a href="#" class="">
+        {{#link-to "index"}}About{{/link-to}}
+    </a>
+    <a href="#" class="">
+        {{#link-to "index"}}Login{{/link-to}}
+    </a>
   </div>
 </nav>
+  <div class="app">
+{{outlet}}
+  </div>
 
 <footer>
   <div class="nav">
     <div class="nav-left">
       <ul class="footer-items">
-        <li class="list fa fa-info">
+        <li class="list">
+          {{fa-icon "info"}}
           <a class="list" href=""></a>About</li>
-        <li class="list fa fa-money">
+        <li class="list">
+          {{fa-icon "money"}}
           <a class="list" href=""></a>Donate</li>
-        <li class="list fa fa-table">
+        <li class="list">
+          {{fa-icon "table"}}
           <a class="list" href=""></a>Data</li>
         <li class="list">
-          <span class="fa fa-table"></span>
+          {{fa-icon "phone"}}
           <a class="list" href=""></a>Contact Us</li>
-        <li class="list fa fa-book">
+        <li class="list">
+          {{fa-icon "book"}}
           <a class="list" href=""></a>Privacy Policy</li>
       </ul>
     </div>
@@ -35,5 +48,3 @@
     </div>
   </div>
 </footer>
-
-{{outlet}}
