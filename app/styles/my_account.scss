@@ -1,0 +1,18 @@
+.card {
+  // background: yellow;
+}
+
+.add-vehicle {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__input {
+    flex-grow: 1;
+    width: 100%;
+    padding: 0 2rem;
+  }
+
+  input {
+    width: 100%;
+  }
+}

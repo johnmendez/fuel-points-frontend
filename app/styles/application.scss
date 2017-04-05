@@ -1,0 +1,66 @@
+body {
+  background: $c-white;
+  font-family: 'Roboto Mono', monospace;
+}
+
+a {
+  color: $c-white;
+  text-decoration: none;
+
+  &:hover {
+    color: $c-primary;
+  }
+}
+
+.section {
+  padding: 0;
+}
+
+.container {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  padding: 1rem;
+  background: $c-nav-brown;
+
+}
+
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.footer-items {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem;
+}
+
+.list {
+  margin: 0.5rem;
+  color: $c-white;
+  text-align: left;
+  cursor: pointer;
+
+  &:hover {
+    color: $c-primary;
+  }
+}
+
+.social {
+  margin: 0.5rem;
+  color: $c-white;
+  font-size: 2.5rem;
+  text-decoration: none;
+
+  &:hover {
+    color: $c-primary;
+  }
+}

@@ -1,139 +1,15 @@
 @import 'reset';
 
-$c-light-grey: #f8f8f8;
-$c-mid-grey: #e7e7e7;
-$c-black: #333;
-
-.app {
-  display: flex;
-  flex-direction: column;
-
-  min-height: 100vh;
-
-  &__header {
-    padding: 1rem;
-    border-bottom: $c-mid-grey solid 0.1rem;
-
-    background: $c-light-grey;
-    color: $c-black;
-  }
-
-  &__main {
-    flex-grow: 1;
-    padding: 1rem;
-  }
-
-  &__footer {
-    padding: 1rem;
-
-    background: $c-black;
-    color: $c-light-grey;
-  }
-}
-
-.card {
-  // background: yellow;
-}
-
-.add-vehicle {
-  display: flex;
-  flex-wrap: wrap;
-
-  &__input {
-    flex-grow: 1;
-    width: 100%;
-    padding: 0 2rem;
-  }
-
-  input {
-    width: 100%;
-  }
-}
-
 $c-primary: #0c76b3;
 $c-yellow: #f6ff53;
+$c-white: #fefefe;
+$c-nav-brown: #363434;
+
 
 $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 //@import 'font-awesome';
 //@import 'box-sizing';
 //@import 'grid';
-//@import 'navandfoot';
 @import 'grid';
-
-body {
-  margin: 0;
-  background: #fefefe;
-  font-family: 'Roboto Mono', monospace;
-}
-
-ul {
-  padding-left: 0;
-  list-style: none;
-}
-
-img {
-  align-self: center;
-  max-width: 100%;
-}
-
-a {
-  text-decoration: none;
-  color: white;
-
-  &:hover {
-    color: $c-primary;
-  }
-}
-
-.section {
-  padding: 0;
-}
-
-.container {
-  max-width: 60rem;
-  margin: 0 auto;
-}
-
-.nav {
-  background: #363434;
-  max-width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem;
-
-}
-
-footer {
-
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-.footer-items {
-  display: flex;
-  flex-direction: column;
-  margin: .5rem;
-}
-
-.list {
-  color: #ddd;
-  margin: .5rem;
-  cursor: pointer;
-  text-align: left;
-
-  &:hover {
-    color: $c-primary;
-  }
-}
-
-.social {
-  font-size: 2.5rem;
-  margin: .5rem;
-  color: #ddd;
-  text-decoration: none;
-
-  &:hover {
-    color: $c-primary;
-  }
-}
+@import 'application';
+@import 'my_account';
