@@ -1,0 +1,51 @@
+@import 'reset';
+
+$c-light-grey: #f8f8f8;
+$c-mid-grey: #e7e7e7;
+$c-black: #333;
+
+.app {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+
+  &__header {
+    padding: 1rem;
+    border-bottom: $c-mid-grey solid 0.1rem;
+
+    background: $c-light-grey;
+    color: $c-black;
+  }
+
+  &__main {
+    flex-grow: 1;
+    padding: 1rem;
+  }
+
+  &__footer {
+    padding: 1rem;
+
+    background: $c-black;
+    color: $c-light-grey;
+  }
+}
+
+.card {
+  background: yellow;
+
+}
+
+.add-vehicle {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__input {
+    flex-grow: 1;
+    padding: 0 2rem;
+  }
+}
+
+.input-year {
+  max-width: 5rem;
+}
