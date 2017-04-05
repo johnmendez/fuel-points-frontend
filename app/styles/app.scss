@@ -32,8 +32,7 @@ $c-black: #333;
 }
 
 .card {
-  background: yellow;
-
+  // background: yellow;
 }
 
 .add-vehicle {
@@ -42,10 +41,11 @@ $c-black: #333;
 
   &__input {
     flex-grow: 1;
+    width: 100%;
     padding: 0 2rem;
   }
-}
 
-.input-year {
-  max-width: 5rem;
+  input {
+    width: 100%;
+  }
 }
