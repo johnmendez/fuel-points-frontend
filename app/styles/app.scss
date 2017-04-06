@@ -86,3 +86,11 @@ footer {
   color: $c-primary;
 }
 }
+
+.register-btn {
+  color: $c-primary;
+
+&:hover {
+  color: black;
+}
+}

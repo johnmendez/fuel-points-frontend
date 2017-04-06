@@ -1,6 +1,4 @@
 
-
-
 .login {
   margin-top: 2rem auto;
   border-radius: .2rem;
@@ -37,12 +35,4 @@ input {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.register-btn {
-  color: black;
-
-&:hover {
-  color: $c-yellow;
-}
 }
