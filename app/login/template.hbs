@@ -1,17 +1,33 @@
 <div class="login">
-  <h2>Login</h2>
-  <form class="login__form">
+  <h2 class="login__heading">Login</h2>
+  <form class="login__form" {{action 'authenticate' on='submit'}}>
+
     <div class="field">
-      <label>Username or Email</label> {{input value=userName}}
+      <label for="identification">Username or Email</label>
+      {{input value=userName class='field'}}
     </div>
+
     <div class="field">
-      <label>Password</label> {{input value=password type="password"}}
+      <label for="password">Password</label>
+      {{input value=password type="password" class="field"}}
     </div>
+
     <div class="btn-field">
-      <div class="btn btn-primary" {{action 'login'}}>Login</div>
-      <p class="register-tag">Don't have a Username?<span>
-    <a class="register-btn" href=""> Register here!</a>
+      <button type="submit" class="btn btn-primary" {{action 'login'}}>Login</button>
+      <p class="register-tag">Don't have an Account?<span>
+    <a class="register-btn" href="">
+      {{#link-to 'register'}}
+      Create one here!
+      {{/link-to}}
+    </a>
   </span></p>
     </div>
   </form>
+
+  {{#if errorMessage}}
+  <p>
+    <strong>Login Failed:</strong>
+    <code>{{errorMessage}}</code>
+  </p>
+  {{/if}}
 </div>
