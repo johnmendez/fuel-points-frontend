@@ -1,18 +1,27 @@
-.card {
-  // background: yellow;
+.ma-card {
+  margin-bottom: 5rem;
+  padding: 0 2rem;
+
+  &__header {
+    text-align: none;
+  }
+
+  &__list-item {
+    margin-bottom: 1rem;
+  }
 }
 
-.add-vehicle {
+.input-container {
   display: flex;
   flex-wrap: wrap;
 
   &__input {
     flex-grow: 1;
     width: 100%;
-    padding: 0 2rem;
   }
 
   input {
     width: 100%;
   }
+
 }
