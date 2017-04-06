@@ -12,14 +12,22 @@
     <a href="#" class="">
         {{#link-to "index"}}About{{/link-to}}
     </a>
-    <a href="#" class="">
-        {{#link-to "login"}}Login{{/link-to}}
-    </a>
+
+    {{#if session.isAuthenticated}}
+      <button {{action 'settings'}}>
+        {{#link-to 'my_account'}}My Account{{/link-to}}
+      </button>
+    {{else}}
+      {{#link-to "login"}}
+        Login
+      {{/link-to}}
+    {{/if}}
+
   </div>
 </nav>
-  <div class="app">
-{{outlet}}
-  </div>
+<div class="app">
+  {{outlet}}
+</div>
 
 <footer>
   <div class="nav">

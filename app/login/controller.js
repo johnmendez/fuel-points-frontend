@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend( {
-  /*session: Ember.inject.service(),
+  session: Ember.inject.service('session'),
   validations: {
     userName: {
       presence: true
@@ -15,7 +15,7 @@ export default Ember.Controller.extend( {
   actions: {
       login() {
         let {userName, password} = this.getProperties('userName', 'password');
-        this.get("session").login(userName, password).then(() => {
+        this.get('session').login(userName, password).then(() => {
           this.transitionToPreviousRoute()
         }).catch((reason) => {
           console.log('Error: ${reason}')
@@ -30,5 +30,5 @@ export default Ember.Controller.extend( {
     } else {
       this.transitionToRoute('index');
     }
-  }*/
+  }
 });
