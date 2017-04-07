@@ -2209,7 +2209,7 @@ ember-changeset-validations@^1.2.6:
     ember-cli-htmlbars "^1.0.3"
     ember-cli-htmlbars-inline-precompile "^0.3.3"
 
-ember-changeset@1.2.3:
+ember-changeset@1.2.3, ember-changeset@^1.2.3:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/ember-changeset/-/ember-changeset-1.2.3.tgz#8cb96e42f64da7c3181425ed69f6c1d6dc4d656f"
   dependencies:

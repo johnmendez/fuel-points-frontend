@@ -1,0 +1,6 @@
+{{#with (changeset model) as |formValues|}}
+  <form>
+    {{form-input label="Username" changeset=formValues property="userName" class='field'}}
+    {{form-input label="Password" changeset=formValues property="password" type="password" class="field"}}
+  </form>
+{{/with}}
