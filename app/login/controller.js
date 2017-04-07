@@ -1,33 +1,25 @@
 import Ember from 'ember';
+import userValidator from './validation';
 
-export default Ember.Controller.extend( {
-  session: Ember.inject.service('session'),
-  validations: {
-    userName: {
-      presence: true
-    },
-    password: {
-      presence: true,
-      length: {minimum: 6}
-    }
-  },
+export default Ember.Controller.extend({
+  userValidator,
 
   actions: {
-      login() {
-        let {userName, password} = this.getProperties('userName', 'password');
-        this.get('session').login(userName, password).then(() => {
-          this.transitionToPreviousRoute()
-        }).catch((reason) => {
-          console.log('Error: ${reason}')
-        })
+    async saveUser(changeset) {
+      await changeset.validate();
+
+      if (changeset.get('isInvalid')) {
+        return alert('You must put in valid information');
       }
-  },
-  transitionToPreviousRoute() {
-    var previousTransition = this.get('previousTransition');
-    if (previousTransition) {
-      this.set('previousTransition', null);
-      previousTransition.retry();
-    } else {
+
+      await changeset.save();
+
+      const user = this.store.createRecord('user', changeset);
+
+      await user.save();
+
+      alert('Account Created');
+
       this.transitionToRoute('index');
     }
   }

@@ -1,6 +1,5 @@
-{{#with (changeset model) as |formValues|}}
-  <form>
-    {{form-input label="Username" changeset=formValues property="userName" class='field'}}
-    {{form-input label="Password" changeset=formValues property="password" type="password" class="field"}}
-  </form>
-{{/with}}
+<label for="{{property}}">{{label}}Username or Email</label>
+<input type="{{type}}" placeholder="{{label}}" value="{{get changeset property}}" oninput={{action (mut (get changeset property)) value="target.value" class="field"}}>
+
+<label for="{{property}}">{{label}}Password</label>
+<input type="{{password}}" placeholder="{{label}}" value="{{get changeset property}}" oninput={{action (mut (changeset property)) value="target.value" class="field"}}>

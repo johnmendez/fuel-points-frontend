@@ -1,23 +1,30 @@
 <div class="login">
   <h2 class="login__heading">Register</h2>
-  <form class="login__form" {{action 'authenticate' on='submit'}}>
+  {{#with (changeset model userValidator) as |formValues|}}
+    <form class="login__form" {{action 'saveUser' on='submit'}}>
 
-    <div class="field">
-      <label for="{{property}}">{{label}}Username or Email{{changeset.userName}}</label>
-      <input type="text" placeholder="{{label}}" value="{{changeset.userName}}" oninput= {{action (mut changeset.userName) value="target.value" class="field"}}>
-    </div>
+      <div class="field">
+        <label for="{{property}}">{{label}}Username or Email</label>
+        <input type="{{type}}" placeholder="{{label}}" value="{{get changeset property}}"
+        oninput= {{action (mut (get changeset property)) value="target.value" class="field"}}>
+        {{form-input label="Username" changeset=formValues property="username" class='field'}}
+      </div>
 
-    <div class="field">
-      <label for="{{property}}">{{label}}Password{{changeset.password}}</label>
-      <input type="text" placeholder="{{label}}" value="{{changeset.userName}}" oninput= {{action (mut changeset.password) value="target.value" class="field"}}>
-    </div>
+      <div class="field">
+        <label for="{{property}}">{{label}}Password</label>
+        <input type="{{password}}" placeholder="{{label}}" value="{{get changeset property}}"
+        oninput= {{action (mut (changeset property)) value="target.value" class="field"}}>
+        {{form-input label="Password" changeset=formValues property="password" type="password"
+        class="field"}}
+      </div>
 
-    <div class="btn-field">
-      <button type="submit" class="btn btn-primary" {{action 'authenticate'}}>
+      <div class="btn-field">
+        <button type="submit" class="btn btn-primary" {{action 'authenticate'}}>
         Register
       </button>
-    </div>
-  </form>
+      </div>
+    </form>
+  {{/with}}
 
   {{#if errorMessage}}
     <p>
