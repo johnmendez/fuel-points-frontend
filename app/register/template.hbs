@@ -1,0 +1,28 @@
+<div class="login">
+  <h2 class="login__heading">Register</h2>
+  {{#with (changeset model userValidator) as |formValues|}}
+    <form class="login__form" {{action 'saveUser' formValues on='submit'}}>
+
+      <div class="field">
+        {{form-input label="Username" changeset=formValues property="username" class="field"}}
+      </div>
+
+      <div class="field">
+        {{form-input label="Password" changeset=formValues property="password" type="password" class="field"}}
+      </div>
+
+      <div class="btn-field">
+        <button type="submit" class="btn btn-primary" {{action 'saveUser'}}>Register</button>
+      </div>
+    </form>
+  {{/with}}
+
+  {{#if errorMessage}}
+    <p>
+      <strong>Login Failed:</strong>
+      <code>{{errorMessage}}</code>
+    </p>
+  {{/if}}
+</div>
+
+{{outlet}}
