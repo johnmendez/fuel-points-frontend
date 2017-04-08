@@ -1,5 +1,2 @@
-<label for="{{property}}">{{label}}Username or Email</label>
-<input type="{{type}}" placeholder="{{label}}" value="{{get changeset property}}" oninput={{action (mut (get changeset property)) value="target.value" class="field"}}>
-
-<label for="{{property}}">{{label}}Password</label>
-<input type="{{password}}" placeholder="{{label}}" value="{{get changeset property}}" oninput={{action (mut (changeset property)) value="target.value" class="field"}}>
+<label for="{{property}}">{{label}}</label>
+<input type="{{type}}" value="{{get changeset property}}" oninput={{action (mut (get changeset property)) value="target.value" class="field"}}>

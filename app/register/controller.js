@@ -14,11 +14,9 @@ export default Ember.Controller.extend({
 
       await changeset.save();
 
-      const user = this.store.createRecord('user', changeset);
+      const user = this.store.createRecord('user', this.model);
 
       await user.save();
-
-      alert('Account Created');
 
       this.transitionToRoute('index');
     }

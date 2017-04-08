@@ -2,10 +2,12 @@ import Ember from 'ember';
 import userValidator from './validation';
 
 export default Ember.Controller.extend({
+  session: Ember.inject.service(),
+
   userValidator,
 
   actions: {
-    async saveUser(changeset) {
+    async loginUser(changeset) {
       await changeset.validate();
 
       if (changeset.get('isInvalid')) {
@@ -14,11 +16,10 @@ export default Ember.Controller.extend({
 
       await changeset.save();
 
-      const user = this.store.createRecord('user', changeset);
-
-      await user.save();
-
-      alert('Account Created');
+      await this.get('session').authenticate('authenticator:token', {
+        identification: this.get('model.username'),
+        identification: this.get('model.password')
+      });
 
       this.transitionToRoute('index');
     }

@@ -1,16 +1,16 @@
 <nav class="nav">
   <div class="nav-left">
     <a href="/" class="nav-item">
-      {{#link-to "index"}}Logo{{/link-to}}
+      {{#link-to 'index'}}Logo{{/link-to}}
     </a>
   </div>
 
   <div class="nav-right">
     <a href="#" class="">
-        {{#link-to "index"}}Data{{/link-to}}
+        {{#link-to 'login'}}Data{{/link-to}}
     </a>
     <a href="#" class="">
-        {{#link-to "index"}}About{{/link-to}}
+        {{#link-to 'index'}}About{{/link-to}}
     </a>
 
     {{#if session.isAuthenticated}}
@@ -18,7 +18,7 @@
         {{#link-to 'my_account'}}My Account{{/link-to}}
       </button>
     {{else}}
-      {{#link-to "login"}}
+      {{#link-to 'login'}}
         Login
       {{/link-to}}
     {{/if}}
