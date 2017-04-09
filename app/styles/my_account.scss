@@ -3,7 +3,12 @@
   padding: 0 2rem;
 
   &__header {
-    text-align: none;
+    text-align: center;
+    margin: 4rem;
+  }
+
+  &__list {
+    text-align: center;
   }
 
   &__list-item {
@@ -13,15 +18,36 @@
 
 .input-container {
   display: flex;
-  flex-wrap: wrap;
-
-  &__input {
-    flex-grow: 1;
-    width: 100%;
-  }
+  text-align: center;
+  margin: 1rem;
+  justify-content: center;
 
   input {
-    width: 100%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    text-align: center;
   }
+}
 
+.add-vehicle-btn {
+  text-align: center;
+}
+
+.delete-btn {
+  border: .1rem solid $c-primary;
+  border-radius: .2rem;
+  margin: 1rem;
+  width: 8rem;
+  background: none;
+  outline: none;
+  text-align: center;
+  font-size: 1.3rem;
+
+&:hover {
+  background: $c-primary;
+  color: $c-yellow;
+  transition: all 0.6s ease;
+  opacity: .7;
+}
 }
