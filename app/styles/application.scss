@@ -3,6 +3,16 @@ body {
   font-family: 'Roboto Mono', monospace;
 }
 
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  &__content {
+    flex-grow: 1;
+  }
+}
+
 a {
   color: $c-white;
   text-decoration: none;
@@ -14,6 +24,7 @@ a {
 
 .section {
   padding: 0;
+  flex: 1;
 }
 
 .container {
@@ -30,8 +41,9 @@ a {
 
 }
 
-.footer {
-  position: absolute;
+
+footer {
+  // position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
