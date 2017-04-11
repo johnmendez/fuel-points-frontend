@@ -3,6 +3,10 @@
 
 module.exports = function(environment) {
   let ENV = {
+    DS: {
+
+    },
+
     modulePrefix: 'fuel-points',
     environment,
     rootURL: '/',

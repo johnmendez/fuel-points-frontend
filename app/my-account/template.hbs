@@ -19,21 +19,22 @@
         <h2>Add Vehicle</h2>
       </div>
 
-      {{#with (changeset model validator) as |formValues| }}
+      {{#with (changeset model validator) as |formValues|}}
         <form class="add-vehicle" {{action 'createRecord' on='submit'}}>
           <div class="input-container">
             <div class="input-container__input">
-              Year: <input type="text" name="" value=""> {{input changeset=formValues}}
+              Year: {{input value=formValues.year changeset=formValues}}
             </div>
             <div class="input-container__input">
-              Make: <input type="text" name="" value=""> {{input changeset=formValues}}
+              Make:{{input value=formValues.make changeset=formValues}}
             </div>
             <div class="input-container__input">
-              Model: <input type="text" name="" value=""> {{input changeset=formValues}}
+              Model: {{input value=formValues.model changeset=formValues}}
             </div>
           </div>
           <div class="add-vehicle-btn">
-            <button type="button" name="button" class="btn add-vehicle__button" {{action 'createRecord'}}>Submit</button>
+            <button type="button" name="button" class="btn add-vehicle__button"
+            {{action 'createRecord'}}>Submit</button>
           </div>
         </form>
       {{/with}}
@@ -55,5 +56,5 @@
       </div>
     </div> --}}
   </div>
+  {{outlet}}
 </div>
-{{outlet}}
