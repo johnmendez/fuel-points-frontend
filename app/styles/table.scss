@@ -1,0 +1,18 @@
+table {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+table,
+th,
+td {
+  border: 0.1rem solid $c-primary;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  width: 33.33333333333%;
+  // Have to be sure
+}
