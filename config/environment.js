@@ -4,6 +4,10 @@
 
 module.exports = function (environment) {
   const ENV = {
+    DS: {
+      host: 'http://localhost:8080',
+    },
+
     modulePrefix: 'fuel-points',
     environment,
     rootURL: '/',
