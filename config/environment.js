@@ -1,8 +1,9 @@
 /* eslint-env node */
+
 'use strict';
 
-module.exports = function(environment) {
-  let ENV = {
+module.exports = function (environment) {
+  const ENV = {
     modulePrefix: 'fuel-points',
     environment,
     rootURL: '/',
