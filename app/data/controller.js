@@ -10,12 +10,19 @@ export default Ember.Route.extend({
     fontSize: 20,
     colors: ['#dbe1d9', '#c4d7f2', '#90b6b5', '#7b8998', '#0b3c49'],
     backgroundColor: '#f0f7ee',
-    // title: 'Simple Text',
 
     animation: {
       startup: true,
       easing: 'inAndOut',
     },
   },
+
+  // options2: {
+  //   width: 600,
+  //   height: 400,
+  //   legend: { position: 'top', maxLines: 3 },
+  //   bar: { groupWidth: '75%' },
+  //   isStacked: true,
+  // }
 
 });
