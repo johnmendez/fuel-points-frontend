@@ -8,7 +8,8 @@ export default Ember.Route.extend({
     fontName: 'Roboto Mono',
     legend: 'none',
     fontSize: 20,
-    // backgroundColor: 'red',
+    colors: ['#dbe1d9', '#c4d7f2', '#90b6b5', '#7b8998', '#0b3c49'],
+    backgroundColor: '#f0f7ee',
     // title: 'Simple Text',
 
     animation: {

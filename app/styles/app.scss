@@ -5,15 +5,33 @@ $c-yellow: #f6ff53;
 $c-white: #fefefe;
 $c-nav-brown: #363434;
 
+// Coolers colors
+$c-honeydew: #f0f7ee;
+$c-columbia-blue: #c4d7f2;
+$c-pewter-blue: #90b6b5;
+$c-steel-teal: #4d918f;
+$c-warm-black: #0b3c49;
 
 $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 //@import 'font-awesome';
 //@import 'box-sizing';
 //@import 'navandfoot';
 @import 'grid';
+@import 'index';
 @import 'login';
 @import 'application';
 @import 'my_account';
 @import 'map';
 @import 'table';
-@import 'chart';
+@import 'data';
+@import 'button';
+
+.section {
+  flex: 1;
+  padding: 0;
+}
+
+.container {
+  max-width: 60rem;
+  margin: 0 auto;
+}
