@@ -2893,6 +2893,12 @@ ember-getowner-polyfill@~1.1.1:
     ember-cli-babel "^5.1.6"
     ember-cli-version-checker "^1.2.0"
 
+ember-google-charts@^1.5.3:
+  version "1.5.3"
+  resolved "https://registry.yarnpkg.com/ember-google-charts/-/ember-google-charts-1.5.3.tgz#c92b441a27d47f3c0fc74231a3b91e4f7e06bd8c"
+  dependencies:
+    ember-cli-babel "^5.1.7"
+
 ember-inflector@^1.9.4:
   version "1.11.0"
   resolved "https://registry.yarnpkg.com/ember-inflector/-/ember-inflector-1.11.0.tgz#99baae18e2bee53cfa97d8db1d739280289a174f"
@@ -2952,6 +2958,13 @@ ember-reactive-helpers@0.4.0:
 ember-resize@0.0.13:
   version "0.0.13"
   resolved "https://registry.yarnpkg.com/ember-resize/-/ember-resize-0.0.13.tgz#d6257074c5ccd049209d6183080f3a2c600a12c6"
+  dependencies:
+    ember-cli-babel "^5.1.6"
+    ember-cli-htmlbars "^1.0.5"
+
+ember-resize@^0.0.17:
+  version "0.0.17"
+  resolved "https://registry.yarnpkg.com/ember-resize/-/ember-resize-0.0.17.tgz#42bd7894cd7ed68bdc88fddb40efca18147f6bd5"
   dependencies:
     ember-cli-babel "^5.1.6"
     ember-cli-htmlbars "^1.0.5"
