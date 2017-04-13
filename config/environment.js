@@ -1,10 +1,11 @@
 /* eslint-env node */
+
 'use strict';
 
-module.exports = function(environment) {
-  let ENV = {
+module.exports = function (environment) {
+  const ENV = {
     DS: {
-
+      host: 'http://localhost:8080',
     },
 
     modulePrefix: 'fuel-points',
