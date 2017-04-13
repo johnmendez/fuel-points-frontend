@@ -6,11 +6,11 @@ $c-white: #fefefe;
 $c-nav-brown: #363434;
 
 // Coolers colors
-$c-honeydew: #f0f7ee;
+$c-honeydew: #f9f9f9;
 $c-columbia-blue: #c4d7f2;
 $c-pewter-blue: #90b6b5;
 $c-steel-teal: #4d918f;
-$c-warm-black: #0b3c49;
+$c-warm-black: #020709;
 
 $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 //@import 'font-awesome';
@@ -21,7 +21,6 @@ $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 @import 'login';
 @import 'application';
 @import 'my_account';
-@import 'map';
 @import 'table';
 @import 'data';
 @import 'button';

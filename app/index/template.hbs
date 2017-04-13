@@ -2,12 +2,14 @@
 
   <h2 class="join-heading">Direction map</h2>
 
-  <div class="map">
-    <iframe class="map" src="//www.google.com/maps/embed/v1/directions?origin=Nashville+International+Airport+(BNA)
-   &destination=Nashville+Parthenon,West+End+Avenue,+Nashville,TN
-   &key=AIzaSyDX484lOBot4bJfq08o0kxycGTmFlUQPwU">
-    </iframe>
+  <div class="map leaflet-container">
+    {{#leaflet-map lat=model.bounds.northeast.lat lng=model.bounds.northeast.lng zoom=zoom scrollWheelZoom=false onMoveend=(action "updateCenter")}}
+      {{google-route route=model}}
+      {{tile-layer url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}}
+    {{/leaflet-map}}
   </div>
+
+
 
 
   <div class="section">
@@ -49,15 +51,17 @@
           <td>4.5 pds of Co<sub>2</sub></td>
         </tr>
       </table>
-
-      <h2 class="join-heading">Join Millions of Users with Fuel Points</h2>
-
-      <div class="btn-home">
-        <button class="btn">Get Started</button>
-      </div>
-
     </div>
   </div>
+
+  <div class="join">
+    <h2 class="join-heading">Join Millions of Users with Fuel Points</h2>
+
+    <div class="btn-home">
+      <button class="btn">Get Started</button>
+    </div>
+  </div>
+
 </div>
 
 {{outlet}}

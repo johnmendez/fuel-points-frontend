@@ -1,0 +1,5 @@
+{{#each route.legs as |leg|}}
+  {{#each leg.steps as |step|}}
+    {{polyline-layer locations=(polyline-decode step.polyline.points)}}
+  {{/each}}
+{{/each}}

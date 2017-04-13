@@ -1,1 +1,14 @@
+.join {
+  background: #eee;
+}
 
+.leaflet-container {
+  height: 50vh;
+  width: 100%;
+
+& a {
+  color: white;
+  background: none;
+  opacity: 1;
+}
+}
