@@ -2,13 +2,16 @@
 
   <h2 class="join-heading">Direction Map</h2>
 
-<form action="" class="destination">
+<form {{action 'submit' on='submit'}} class="destination">
   <div class="input-container">
     <div class="input-container__input">
       Point A: {{input class="" value=formValues.year changeset=formValues}}
     </div>
     <div class="input-container__input">
       Point B: {{input class="" value=formValues.make changeset=formValues}}
+    </div>
+    <div class="input-container__input">
+      <button class="destination-btn" {{action 'submit'}}>Go</button>
     </div>
   </div>
 </form>
