@@ -2,14 +2,12 @@
 
   <h2 class="join-heading">Direction map</h2>
 
-  <div class="map leaflet-container">
+  <div class="leaflet-container">
+    -
     {{#leaflet-map lat=model.bounds.northeast.lat lng=model.bounds.northeast.lng zoom=zoom scrollWheelZoom=false onMoveend=(action "updateCenter")}}
-      {{google-route route=model}}
-      {{tile-layer url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}}
-    {{/leaflet-map}}
+      - {{google-route route=model}} - {{tile-layer url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}} -
+      {{/leaflet-map}}
   </div>
-
-
 
 
   <div class="section">
@@ -53,7 +51,6 @@
       </table>
     </div>
   </div>
-
   <div class="join">
     <h2 class="join-heading">Join Millions of Users with Fuel Points</h2>
 
