@@ -1,9 +1,20 @@
 <div class="home-content">
 
-  <h2 class="join-heading">Direction map</h2>
+  <h2 class="join-heading">Direction Map</h2>
 
-  <div class="leaflet-container">
-    -
+<form action="" class="destination">
+  <div class="input-container">
+    <div class="input-container__input">
+      Point A: {{input class="" value=formValues.year changeset=formValues}}
+    </div>
+    <div class="input-container__input">
+      Point B: {{input class="" value=formValues.make changeset=formValues}}
+    </div>
+  </div>
+</form>
+
+<div class="leaflet-container">
+
     {{#leaflet-map lat=model.bounds.northeast.lat lng=model.bounds.northeast.lng zoom=zoom scrollWheelZoom=false onMoveend=(action "updateCenter")}}
       - {{google-route route=model}} - {{tile-layer url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}} -
       {{/leaflet-map}}
@@ -53,6 +64,39 @@
   </div>
   <div class="join">
     <h2 class="join-heading">Join Millions of Users with Fuel Points</h2>
+  <div class="container">
+    <div class="grid">
+      <div class="grid__item">
+
+      <div class="card__membership">
+        <div class="card__membership__top">
+          <h2 class="card__membership__heading">Join Now</h2>
+          </div>
+          <div class="card__membership__mid">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, impedit placeat. Deleniti vitae nam magnam dignissimos voluptatem, natus, sapiente dicta, id ut ab atque mollitia! Aspernatur dolorem quidem adipisci molestiae?</p>
+          </div>
+      </div>
+
+      <div class="card__membership">
+        <div class="card__membership__top">
+          <h2 class="card__membership__heading">Join Now</h2>
+          </div>
+          <div class="card__membership__mid">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, impedit placeat. Deleniti vitae nam magnam dignissimos voluptatem, natus, sapiente dicta, id ut ab atque mollitia! Aspernatur dolorem quidem adipisci molestiae?</p>
+          </div>
+      </div>
+
+      <div class="card__membership">
+        <div class="card__membership__top">
+          <h2 class="card__membership__heading">Join Now</h2>
+          </div>
+          <div class="card__membership__mid">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, impedit placeat. Deleniti vitae nam magnam dignissimos voluptatem, natus, sapiente dicta, id ut ab atque mollitia! Aspernatur dolorem quidem adipisci molestiae?</p>
+          </div>
+      </div>
+      </div>
+    </div>
+  </div>
 
     <div class="btn-home">
       <button class="btn">Get Started</button>
