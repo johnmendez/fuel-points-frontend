@@ -6,6 +6,7 @@ module.exports = function (environment) {
   const ENV = {
     DS: {
       host: 'http://localhost:8080',
+      // The cause of the host error?
     },
 
     modulePrefix: 'fuel-points',
@@ -51,6 +52,13 @@ module.exports = function (environment) {
   if (environment === 'production') {
 
   }
+
+  ENV['ember-simple-auth'] = {
+    authorizer: 'authorizer:token'
+  };
+  ENV['ember-simple-auth-token'] = {
+    serverTokenEndpoint: `${ENV.DS.host}/login`,
+  };
 
   return ENV;
 };
