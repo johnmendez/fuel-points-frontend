@@ -15,13 +15,10 @@
       </a> --}}
 
       {{#if session.isAuthenticated}}
-        {{#link-to 'my_account'}}
-          My Account
-        {{/link-to}}
+        {{#link-to 'my_account'}}MyAccount{{/link-to}}
+        <a {{action 'invalidateSession'}}>Logout</a>
       {{else}}
-        {{#link-to 'login'}}
-          Login
-        {{/link-to}}
+        {{#link-to 'login'}}Login{{/link-to}}
       {{/if}}
 
     </div>
@@ -33,10 +30,10 @@
       <div class="nav-left">
         <ul class="footer-items">
           <li class="list">{{fa-icon "info"}}<a class="list" href=""></a>About</li>
-          <li class="list">{{fa-icon "money"}}<a class="list" href=""></a>Donate</li>
+          {{!-- <li class="list">{{fa-icon "money"}}<a class="list" href=""></a>Donate</li> --}}
           <li class="list">{{fa-icon "table"}}<a class="list" href=""></a>Data</li>
           <li class="list">{{fa-icon "phone"}}<a class="list" href=""></a>Contact Us</li>
-          <li class="list">{{fa-icon "book"}}<a class="list" href=""></a>Privacy Policy</li>
+          {{!-- <li class="list">{{fa-icon "book"}}<a class="list" href=""></a>Privacy Policy</li> --}}
         </ul>
       </div>
 
