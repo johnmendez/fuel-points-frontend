@@ -18,6 +18,7 @@
         {{#link-to 'my_account'}}MyAccount{{/link-to}}
         <a {{action 'invalidateSession'}}>Logout</a>
       {{else}}
+        {{#link-to 'register'}}Register{{/link-to}}
         {{#link-to 'login'}}Login{{/link-to}}
       {{/if}}
 
