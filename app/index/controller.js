@@ -12,3 +12,10 @@ export default Ember.Controller.extend({
     }
   }
 });
+
+//this.store.queryRecord('directions', {
+//        directions: {
+//          origin: '',
+//          destination: '',
+//        }
+//        });
