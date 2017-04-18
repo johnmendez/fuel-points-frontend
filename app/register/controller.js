@@ -2,6 +2,7 @@ import Ember from 'ember';
 import userValidator from './validation';
 
 export default Ember.Controller.extend({
+  session: Ember.inject.service(),
   userValidator,
 
   actions: {
@@ -18,7 +19,10 @@ export default Ember.Controller.extend({
 
       await user.save();
 
-      this.transitionToRoute('index');
+      await this.get('session').authenticate('authenticator:token', {
+        identification: this.get('model.name'),
+        password: this.get('model.password')
+      });
     }
   }
 });

@@ -1,0 +1,17 @@
+.textlist {
+  list-style: decimal-leading-zero;
+}
+
+li {
+  margin: 1rem;
+}
+
+.textholder {
+  margin: 5rem;
+  background: $c-black;
+  color: $c-honeydew;
+
+  &__holder {
+    padding: 1rem 4rem;
+  }
+}
