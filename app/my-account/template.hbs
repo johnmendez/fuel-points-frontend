@@ -5,12 +5,12 @@
         <h2>My Vehicles</h2>
       </div>
       <ul class="ma-card__list">
-        {{#each model as |carRecord|}}
-          <li class="ma-card__list-item">Ex.Make Ex.Model Ex.Year {{carRecord.year}}, {{carRecord.make}}, {{carRecord.model}}
+        {{#each model as |vehicles|}}
+          <li class="ma-card__list-item">Ex.Make Ex.Model Ex.Year {{vehicles.year}}, {{vehicles.make}}, {{vehicles.model}}
             <button class="delete-btn" type="button" name="button">Delete</button>
           </li>
-          <li class="ma-card__list-item">Ex.Make Ex.Model Ex.Year {{carRecord.year}}, {{carRecord.make}}, {{carRecord.model}}
-            <button {{action "deleteCar" carRecord}} class="delete-btn" type="button" name="button">Delete</button>
+          <li class="ma-card__list-item">Ex.Make Ex.Model Ex.Year {{vehicles.year}}, {{vehicles.make}}, {{vehicles.model}}
+            <button class="delete-btn" type="button" name="button">Delete</button>
           </li>
         {{/each}}
       </ul>
@@ -33,8 +33,7 @@
             </div>
           </div>
           <div class="add-vehicle-btn">
-            <button type="button" name="button" class="btn add-vehicle__button"
-            {{action 'createRecord'}}>Submit</button>
+            <button type="button" name="button" class="btn add-vehicle__button">Submit</button>
           </div>
         </form>
       {{/with}}

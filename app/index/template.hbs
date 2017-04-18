@@ -1,32 +1,5 @@
 <div class="home-content">
 
-  {{!-- <div class="grid">
-    <div class="grid__item">
-      <div class="card">
-        <div class="fa fa-car card__icon" aria-hidden="true"></div>
-        <h2>Ford Mustang</h2>
-        <button class="btn" {{action (toggle this "isExpanded")}}>Begin Route
-        {{if isExpanded "destination"}}</button>
-      </div>
-    </div>
-
-    <div class="grid__item">
-      <div class="card">
-        <div class="fa fa-car card__icon" aria-hidden="true"></div>
-        <h2>Toyota Corolla</h2>
-        <button class="btn">Begin Route</button>
-      </div>
-    </div>
-
-    <div class="grid__item">
-      <div class="card">
-        <div class="fa fa-car card__icon" aria-hidden="true"></div>
-        <h2>Chevrolet Silverado</h2>
-        <button class="btn">Begin Route</button>
-      </div>
-    </div>
-  </div> --}}
-
   <div class="leaflet-container">
 
     {{#leaflet-map lat=model.firstObject.bounds.northeast.lat lng=model.firstObject.bounds.northeast.lng zoom=zoom scrollWheelZoom=false onMoveend=(action "updateCenter")}}
@@ -102,6 +75,7 @@
       </table>
     </div>
   </div>
+
   <div class="container">
     <div class="subscribe">
       <h2 class="join-heading">Go social with your Fuel Points</h2>
@@ -148,7 +122,7 @@
       </div>
 
       <div class="btn-home">
-        <button class="btn">Get Started</button>
+        {{#link-to "register" class="btn"}}Get Started{{/link-to}}
       </div>
     </div>
   </div>
