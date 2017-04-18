@@ -15,7 +15,7 @@
       </a>
 
       {{#if session.isAuthenticated}}
-        {{#link-to 'my_account'}}MyAccount{{/link-to}}
+        {{#link-to 'my_account'}}My Account{{/link-to}}
         <a {{action 'invalidateSession'}}>Logout</a>
       {{else}}
         {{#link-to 'register'}}Register{{/link-to}}
