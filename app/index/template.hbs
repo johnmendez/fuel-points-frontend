@@ -1,15 +1,12 @@
 <div class="home-content">
 
-  <div class="section">
-    <div class="container">
-  <h2 class="join-heading">Pick Your Vehicle</h2>
-
-  <div class="grid">
+  <!--<div class="grid">
     <div class="grid__item">
       <div class="card">
         <div class="fa fa-car card__icon" aria-hidden="true"></div>
         <h2>Ford Mustang</h2>
-        <button class="btn">Begin Route</button>
+        <button class="btn" {{action (toggle this "isExpanded")}}>Begin Route
+        {{if isExpanded "destination"}}</button>
       </div>
     </div>
 
@@ -28,23 +25,7 @@
         <button class="btn">Begin Route</button>
       </div>
     </div>
-  </div>
-
-<form {{action 'submit' on='submit'}} class="destination">
-  <div class="input-container__route">
-    <div class="input-container__input">
-      Point A: {{input class="" value=formValues.year changeset=formValues}}
-    </div>
-    <div class="input-container__input">
-      Point B: {{input class="" value=formValues.make changeset=formValues}}
-    </div>
-    <div class="input-container__input">
-      <button class="destination-btn" {{action 'submit'}}>Go</button>
-    </div>
-  </div>
-</form>
-</div>
-</div>
+  </div>-->
 
 <div class="leaflet-container">
 
@@ -53,9 +34,26 @@
       {{/leaflet-map}}
   </div>
 
-
   <div class="section">
     <div class="container">
+      <form {{action 'submit' on='submit'}} class="destination">
+        <div class="input-container__route">
+          <div class="input-container__input">
+          {{input class="destination__input" value=formValues.year changeset=formValues placeholder="Origin"}}
+          </div>
+          <div class="input-container__input">
+            {{input class="destination__input" value=formValues.make changeset=formValues placeholder="Destination"}}
+          </div>
+          <div class="input-container__input">
+            {{input class="destination__input" value=formValues.make changeset=formValues placeholder="Fuel Price"}}
+          </div>
+          <div class="input-container__input">
+            <button class="destination-btn" {{action 'submit'}}>Go</button>
+          </div>
+        </div>
+      </form>
+
+
       <h2 class="join-heading">Fuel Co<sub>2</sub> Output</h2>
       <table>
         <tr>

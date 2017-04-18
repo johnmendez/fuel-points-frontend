@@ -3473,6 +3473,12 @@ ember-test-helpers@^0.6.0-beta.1:
   version "0.6.3"
   resolved "https://registry.yarnpkg.com/ember-test-helpers/-/ember-test-helpers-0.6.3.tgz#f864cdf6f4e75f3f8768d6537785b5ab6e82d907"
 
+ember-toggle-helper@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/ember-toggle-helper/-/ember-toggle-helper-0.1.1.tgz#49a83362cdf3493629c421bf621e3aaae0d3cb5e"
+  dependencies:
+    ember-cli-babel "^5.1.5"
+
 ember-truth-helpers@1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/ember-truth-helpers/-/ember-truth-helpers-1.2.0.tgz#e63cffeaa8211882ae61a958816fded3790d065b"
