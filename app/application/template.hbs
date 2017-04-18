@@ -9,19 +9,17 @@
     <div class="nav-right">
       <a href="#" class="">
         {{#link-to 'data'}}Data{{/link-to}}
-    </a>
+      </a>
       <a href="#" class="">
-        {{#link-to 'index'}}About{{/link-to}}
-    </a>
+        {{#link-to 'about'}}About{{/link-to}}
+      </a>
 
       {{#if session.isAuthenticated}}
-        <button {{action 'settings'}}>
-        {{#link-to 'my_account'}}My Account{{/link-to}}
-      </button>
+        {{#link-to 'my_account'}}MyAccount{{/link-to}}
+        <a {{action 'invalidateSession'}}>Logout</a>
       {{else}}
-        {{#link-to 'login'}}
-          Login
-        {{/link-to}}
+        {{#link-to 'register'}}Register{{/link-to}}
+        {{#link-to 'login'}}Login{{/link-to}}
       {{/if}}
 
     </div>
@@ -32,21 +30,11 @@
     <div class="nav">
       <div class="nav-left">
         <ul class="footer-items">
-          <li class="list">
-            {{fa-icon "info"}}
-            <a class="list" href=""></a>About</li>
-          <li class="list">
-            {{fa-icon "money"}}
-            <a class="list" href=""></a>Donate</li>
-          <li class="list">
-            {{fa-icon "table"}}
-            <a class="list" href=""></a>Data</li>
-          <li class="list">
-            {{fa-icon "phone"}}
-            <a class="list" href=""></a>Contact Us</li>
-          <li class="list">
-            {{fa-icon "book"}}
-            <a class="list" href=""></a>Privacy Policy</li>
+          <li class="list">{{fa-icon "info"}}<a class="list" href=""></a>About</li>
+          {{!-- <li class="list">{{fa-icon "money"}}<a class="list" href=""></a>Donate</li> --}}
+          <li class="list">{{fa-icon "table"}}<a class="list" href=""></a>Data</li>
+          <li class="list">{{fa-icon "phone"}}<a class="list" href=""></a>Contact Us</li>
+          {{!-- <li class="list">{{fa-icon "book"}}<a class="list" href=""></a>Privacy Policy</li> --}}
         </ul>
       </div>
 

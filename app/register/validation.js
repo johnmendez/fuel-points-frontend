@@ -2,7 +2,7 @@ import { validateFormat, validatePresence, validateLength
 } from 'ember-changeset-validations/validators';
 
 export default {
-  username: [
+  name: [
     validatePresence(true)
   ],
 
@@ -10,4 +10,4 @@ export default {
     validatePresence(true),
     validateLength({ min: 6 }),
   ]
-}
+};
