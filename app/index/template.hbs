@@ -1,9 +1,37 @@
 <div class="home-content">
 
-  <h2 class="join-heading">Direction Map</h2>
+  <div class="section">
+    <div class="container">
+  <h2 class="join-heading">Pick Your Vehicle</h2>
+
+  <div class="grid">
+    <div class="grid__item">
+      <div class="card">
+        <div class="fa fa-car card__icon" aria-hidden="true"></div>
+        <h2>Ford Mustang</h2>
+        <button class="btn">Begin Route</button>
+      </div>
+    </div>
+
+    <div class="grid__item">
+      <div class="card">
+        <div class="fa fa-car card__icon" aria-hidden="true"></div>
+        <h2>Toyota Corolla</h2>
+        <button class="btn">Begin Route</button>
+      </div>
+    </div>
+
+    <div class="grid__item">
+      <div class="card">
+        <div class="fa fa-car card__icon" aria-hidden="true"></div>
+        <h2>Chevrolet Silverado</h2>
+        <button class="btn">Begin Route</button>
+      </div>
+    </div>
+  </div>
 
 <form {{action 'submit' on='submit'}} class="destination">
-  <div class="input-container">
+  <div class="input-container__route">
     <div class="input-container__input">
       Point A: {{input class="" value=formValues.year changeset=formValues}}
     </div>
@@ -15,6 +43,8 @@
     </div>
   </div>
 </form>
+</div>
+</div>
 
 <div class="leaflet-container">
 
@@ -65,6 +95,24 @@
       </table>
     </div>
   </div>
+      <div class="container">
+      <div class="subscribe">
+          <h2 class="join-heading">Go social with your Fuel Points</h2>
+            <div class="social-buttons__group">
+              <button class="chat-btn social-buttons">
+                    Chat with us on messenger
+              </button>
+              <button class="android-btn social-buttons">
+                      Get Fuel Points with Android
+              </button>
+              <button class="ios-btn social-buttons">
+                      Get Fuel Points with iOS
+              </button>
+            </div>
+      </div>
+    </div>
+
+
   <div class="join">
     <h2 class="join-heading">Join Millions of Users with Fuel Points</h2>
   <div class="container">
