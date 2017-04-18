@@ -9,6 +9,10 @@ module.exports = function (environment) {
       // The cause of the host error?
     },
 
+    google: {
+      apiKey: process.env.GOOGLE_API_KEY,
+    },
+
     modulePrefix: 'fuel-points',
     environment,
     rootURL: '/',

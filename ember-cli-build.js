@@ -4,12 +4,17 @@
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
+
   let app = new EmberApp(defaults, {
+    dotEnv: {
+      clientAllowedKeys: ['GOOGLE_API_KEY'],
+    },
     'ember-cli-babel': {
       includePolyfill: true
     }
+  }
     // Add options here
-  });
+  );
 
   // Use `app.import` to add additional libraries to the generated
   // output files.

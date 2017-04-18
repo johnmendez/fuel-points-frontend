@@ -1,3 +1,8 @@
+.input-container {
+  display: flex;
+  align-items: baseline;
+}
+
 .btn-home {
   display: flex;
   justify-content: center;
@@ -13,11 +18,31 @@
   background: none;
   font-size: 1.3rem;
   text-align: center;
+  color: white;
 
   &:hover {
     transition: 0.6s ease;
     background: $c-primary;
-    color: $c-warm-black;
+    color: $c-white;
+    opacity: 0.7;
+  }
+}
+
+.destination-btn {
+  width: 6rem;
+  height: 2rem;
+  margin: 1rem;
+  border: 0.1rem solid $c-primary;
+  border-radius: 0.2rem;
+  outline: none;
+  background: none;
+  font-size: 1rem;
+  text-align: center;
+
+  &:hover {
+    transition: 0.6s ease;
+    background: $c-primary;
+    color: $c-white;
     opacity: 0.7;
   }
 }

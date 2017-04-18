@@ -6,7 +6,8 @@ table {
 table,
 th,
 td {
-  border: 0.1rem solid $c-primary;
+  //border: 0.1rem solid $c-primary;
+  border: none;
   text-align: center;
   border-collapse: collapse;
 }

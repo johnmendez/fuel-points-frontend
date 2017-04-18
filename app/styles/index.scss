@@ -1,1 +1,84 @@
 
+.card__membership {
+  margin: 2rem;
+  text-align: center;
+  border: .1rem solid black;
+  border-radius: .2rem;
+  min-width: 16rem;
+  box-shadow:  1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+
+&:hover {
+  box-shadow:  2px 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+&__top {
+  border-bottom: .1rem solid black;
+  background: $c-primary;
+}
+}
+
+.card__membership__mid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.join {
+  background: #eee;
+}
+
+.leaflet-container {
+  height: 60vh;
+  width: 100%;
+
+& a {
+  color: white;
+  background: none;
+  opacity: 1;
+}
+}
+
+.input-container__route {
+  display: flex;
+}
+
+.destination__input {
+  background: #1c1d19;
+  color: white;
+}
+
+.placeholder {
+  color: $c-primary;
+}
+
+.subscribe {
+  background: #1c1d19;
+  color: white;
+  border-radius: .3rem;
+  margin: 1rem auto;
+}
+
+.social-buttons__group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-buttons {
+  width: 16rem;
+  margin: 1rem;
+  padding: .5rem;
+  border: 0.1rem solid $c-primary;
+  border-radius: 0.2rem;
+  outline: none;
+  background: none;
+  font-size: 1rem;
+  color: white;
+
+  &:hover {
+    transition: 0.6s ease;
+    background: $c-primary;
+    color: $c-white;
+  }
+}

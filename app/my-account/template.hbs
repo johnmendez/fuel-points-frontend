@@ -5,8 +5,15 @@
         <h2>My Vehicles</h2>
       </div>
       <ul class="ma-card__list">
-        {{#each model as |carRecord|}}
-          <li class="ma-card__list-item">Ex.Make Ex.Model Ex.Year {{carRecord.year}}, {{carRecord.make}}, {{carRecord.model}}<button class="delete-btn" type="button" name="button">Delete</button></li>
+        {{#each model as |vehicles|}}
+          <li class="ma-card__list-item">
+            Ex.Make Ex.Model Ex.Year {{vehicles.year}}, {{vehicles.make}}, {{vehicles.model}}
+            <button class="delete-btn" type="button" name="button">Delete</button>
+          </li>
+          <li class="ma-card__list-item">
+            Ex.Make Ex.Model Ex.Year {{vehicles.year}}, {{vehicles.make}}, {{vehicles.model}}
+            <button class="delete-btn" type="button" name="button">Delete</button>
+          </li>
         {{/each}}
       </ul>
       <hr>
@@ -14,22 +21,18 @@
         <h2>Add Vehicle</h2>
       </div>
 
-      <form class="add-vehicle" {{action 'createRecord' on='submit'}}>
-        <div class="input-container">
-          <div class="input-container__input">
-            Year: {{input value=formValues.year changeset=formValues}}
+      {{#with (changeset formValues) as |formValues|}}
+        <form class="add-vehicle" {{action 'createRecord' on='submit'}}>
+          <div class="input-container">
+            <div class="input-container__input">
+              Year: {{input value=formValues.year changeset=formValues}}
+            </div>
+            <div class="add-vehicle-btn">
+              <button type="button" name="button" class="btn add-vehicle__button">Submit</button>
+            </div>
           </div>
-          <div class="input-container__input">
-            Make:{{input value=formValues.make changeset=formValues}}
-          </div>
-          <div class="input-container__input">
-            Model: {{input value=formValues.model changeset=formValues}}
-          </div>
-        </div>
-        <div class="add-vehicle-btn">
-          <button type="button" name="button" class="btn add-vehicle__button">Submit</button>
-        </div>
-      </form>
+        </form>
+      {{/with}}
     </div>
   </div>
 </div>
