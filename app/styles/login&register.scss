@@ -1,6 +1,7 @@
 
 .login {
   margin-top: 2rem auto;
+
   border-radius: 0.2rem;
 
   &__heading {
@@ -13,9 +14,9 @@
 }
 
 .user__form {
+  margin: 2rem;
   display: flex;
   justify-content: center;
-  margin: 2rem;
 }
 
 .user__input {
