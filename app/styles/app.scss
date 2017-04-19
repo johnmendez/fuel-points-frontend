@@ -2,7 +2,7 @@
 
 $c-primary: #0c76b3;
 $c-yellow: #f6ff53;
-$c-white: #fefefe;
+$c-white: #f0f7ee;
 $c-nav-brown: #363434;
 $c-black: #080808;
 $c-shade2: rgba(0, 0, 0, 0.2);
@@ -32,6 +32,10 @@ $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 @import 'data';
 @import 'button';
 @import 'about';
+
+.app {
+  background-color: $c-white;
+}
 
 .section {
   flex: 1;

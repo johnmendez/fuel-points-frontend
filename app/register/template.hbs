@@ -4,11 +4,11 @@
     <form class="login__form" {{action 'saveUser' formValues on='submit'}}>
 
       <div class="user__form">
-        {{form-input label="Username" changeset=formValues type="text" property="name" class="user__input"}}
+        {{form-input placeholder='Username' changeset=formValues type="text" property="name" class="field destination__input"}}
       </div>
 
       <div class="user__form">
-        {{form-input label="Password" changeset=formValues property="password" type="password" class="user__input"}}
+        {{form-input placeholder='Password' changeset=formValues property="password" type="password" class="field destination__input"}}
       </div>
 
       <div class="btn-field">

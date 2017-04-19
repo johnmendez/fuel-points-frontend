@@ -6,58 +6,57 @@
     margin: 1rem;
   }
 
-.ma-card {
-  margin-bottom: 5rem;
-  padding: 0 2rem;
+  .ma-card {
+    margin-bottom: 5rem;
+    padding: 0 2rem;
 
-  &__header {
-    text-align: center;
-    margin: 4rem;
+    &__header {
+      margin: 4rem;
+      text-align: center;
+    }
+
+    &__list {
+      text-align: center;
+    }
+
+    &__list-item {
+      margin-bottom: 1rem;
+    }
   }
 
-  &__list {
-    text-align: center;
-  }
-
-  &__list-item {
-    margin-bottom: 1rem;
-  }
-}
-
-.input-container {
-  display: flex;
-  text-align: center;
-  margin: 1rem;
-  justify-content: center;
-
-  input {
-    width: 100%;
+  .input-container {
     display: flex;
-    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    text-align: center;
+
+    input {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .add-vehicle-btn {
     text-align: center;
   }
-}
 
+  .delete-btn {
+    width: 8rem;
+    margin: 1rem;
+    border: 0.1rem solid $c-primary;
+    border-radius: 0.2rem;
+    outline: none;
+    background: none;
+    font-size: 1.3rem;
+    text-align: center;
 
-.add-vehicle-btn {
-  text-align: center;
-}
-
-.delete-btn {
-  border: .1rem solid $c-primary;
-  border-radius: .2rem;
-  margin: 1rem;
-  width: 8rem;
-  background: none;
-  outline: none;
-  text-align: center;
-  font-size: 1.3rem;
-
-&:hover {
-  background: $c-primary;
-  color: $c-yellow;
-  transition: all 0.6s ease;
-  opacity: .7;
-}
-}
+    &:hover {
+      transition: all 0.6s ease;
+      background: $c-primary;
+      color: $c-yellow;
+      opacity: 0.7;
+    }
+  }
 }
