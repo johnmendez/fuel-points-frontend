@@ -41,6 +41,17 @@ export default Ember.Controller.extend({
       .then(results => results.filter(r => r.match(filter)));
     },
 
+    searchModel(year, make, query) {
+      const filter = new RegExp(query, 'i');
+
+      return fetch(`http://localhost:8080/makes?year=${year}`, {
+        headers: {
+          Authorization: `Bearer ${this.get('token')}`
+        },
+      }).then(r => r.json())
+      .then(results => results.filter(r => r.match(filter)));
+    },
+
 
   }
 });

@@ -41,6 +41,14 @@
                   {{/power-select-typeahead}}
                 </p>
               </div>
+              <div>
+                <p>Model</p>
+                <p>
+                  {{#power-select-typeahead disabled=(empty formValues.year) disabled=(empty formValues.make) search=(action 'searchModel' formValues.year) selected=formValues.model onchange=(action (mut formValues.model)) as |model|}}
+                    {{model}}
+                  {{/power-select-typeahead}}
+                </p>
+              </div>
             </div>
           </div>
           <div class="input-container">
