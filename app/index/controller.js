@@ -13,7 +13,7 @@ export default Ember.Controller.extend({
     },
 
     async search(changeset) {
-      const result = await this.store.queryRecord('direction-results', {
+      const result = await this.store.queryRecord('direction-result', {
         origin: this.formValues.origin,
         destination: this.formValues.destination,
         price: this.formValues.price,

@@ -2,8 +2,10 @@
 
   <div class="leaflet-container">
 
-    {{#leaflet-map lat=model.googleResult.routes.firstObject.bounds.northeast.lat lng=model.googleResult.routes.firstObject.bounds.northeast.lng zoom=zoom scrollWheelZoom=false onMoveend=(action "updateCenter")}}
-      {{#each model.googleResult.routes as |value|}}
+    {{log model.json}}
+
+    {{#leaflet-map lat=model.json.routes.firstObject.bounds.northeast.lat lng=model.json.routes.firstObject.bounds.northeast.lng zoom=zoom scrollWheelZoom=false onMoveend=(action "updateCenter")}}
+      {{#each model.json.routes as |value|}}
         {{google-route route=value}}
       {{/each}}
 
@@ -38,17 +40,22 @@
       <hr>
       <table>
         <tr>
-          <th>SUZUKI Celerio 2015</th>
+          {{#with model.tripsWithVehicleOne.firstObject.vehicle as |vehicle|}}
+            <th>{{vehicle.year}} {{vehicle.make}} {{vehicle.model}}</th>
+          {{/with}}
+
           <th>Distance</th>
           <th>Fuel Cost</th>
           <th>Emissions</th>
         </tr>
-        <tr>
-          <td><span class="fa fa-car"></span> Name</td>
-          <td>10.8 miles</td>
-          <td>20</td>
-          <td>3.8 Co<sub>2</sub></td>
-        </tr>
+        {{#each model.tripsWithVehicleOne as |trip|}}
+          <tr>
+            <td><span class="fa fa-car"></span></td>
+            <td>{{trip.totalDistance}}m</td>
+            <td>20</td>
+            <td>3.8 Co<sub>2</sub></td>
+          </tr>
+        {{/each}}
         <tr>
           <th>TOYOTA RAV4 2015</th>
           <th>Distance</th>
