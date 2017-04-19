@@ -39,14 +39,6 @@
 }
 }
 
-.input-container__route {
-  display: flex;
-  justify-content: space-around;
-}
-
-.destination {
-
-}
 
 .destination__input {
   background: $c-warm-black;
@@ -54,7 +46,7 @@
 }
 
 .placeholder {
-  color: $c-primary;
+  color: $c-steel-teal;
 }
 
 .subscribe {
@@ -86,23 +78,4 @@
     background: $c-steel-teal;
     color: $c-honeydew;
   }
-}
-
-.field {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 20rem;
-  height: 2rem;
-  margin: 0 auto;
-  padding: 0.5rem;
-  border: 0;
-  border-radius: 0.5rem;
-  outline: none;
-  background: $c-warm-black;
-  color: $c-honeydew;
-  font-size: 1.3rem;
-  text-align: center;
-  opacity: 0.7;
 }
