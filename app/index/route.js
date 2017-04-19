@@ -3,7 +3,11 @@ import data from './data';
 
 export default Ember.Route.extend({
   model() {
-    return data.routes;
+    return this.store.queryRecord('direction-results', {
+      origin: 'Nashville',
+      destination: 'Atlanta',
+      price: 2.25,
+    });
   },
 
   setupController(controller) {

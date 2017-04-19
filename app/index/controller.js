@@ -18,6 +18,8 @@ export default Ember.Controller.extend({
         destination: this.formValues.destination,
         price: this.formValues.price,
       });
+
+      this.set('model', result);
     }
   }
 });
