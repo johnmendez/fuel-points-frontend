@@ -40,46 +40,23 @@
       <hr>
       <table>
         <tr>
-          {{#with model.tripsWithVehicleOne.firstObject.vehicle as |vehicle|}}
-            <th>{{vehicle.year}} {{vehicle.make}} {{vehicle.model}}</th>
-          {{/with}}
-
+          <th><span class="fa fa-car"></span></th>
           <th>Distance</th>
+          <th>Duration</th>
           <th>Fuel Cost</th>
           <th>Emissions</th>
         </tr>
         {{#each model.tripsWithVehicleOne as |trip|}}
           <tr>
-            <td><span class="fa fa-car"></span></td>
+            {{#with model.tripsWithVehicleOne.firstObject.vehicle as |vehicle|}}
+              <td>{{vehicle.year}} {{vehicle.make}} {{vehicle.model}}</td>
+            {{/with}}
             <td>{{trip.totalDistance}}m</td>
-            <td>20</td>
-            <td>3.8 Co<sub>2</sub></td>
+            <td>{{trip.totalDuration}}m</td>
+            <td>{{trip.totalFuelPrice}}m</td>
+            <td>{{trip.emissions}}</td>
           </tr>
         {{/each}}
-        <tr>
-          <th>TOYOTA RAV4 2015</th>
-          <th>Distance</th>
-          <th>Fuel Cost</th>
-          <th>Emissions</th>
-        </tr>
-        <tr>
-          <td><span class="fa fa-car"></span> Name</td>
-          <td>10.8 miles</td>
-          <td>20</td>
-          <td>5.9 Co<sub>2</sub></td>
-        </tr>
-        <tr>
-          <th>TOYOTA RAV4 2015</th>
-          <th>Distance</th>
-          <th>Fuel Cost</th>
-          <th>Emissions</th>
-        </tr>
-        <tr>
-          <td><span class="fa fa-car"></span> Name</td>
-          <td>10.8 miles</td>
-          <td>20</td>
-          <td>4.5 Co<sub>2</sub></td>
-        </tr>
       </table>
     </div>
   </div>
