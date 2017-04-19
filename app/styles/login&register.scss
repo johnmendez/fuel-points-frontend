@@ -9,14 +9,15 @@
 }
 
   &__form {
+    border: 0.1rem, soild, $c-steel-teal;
     text-align: center;
 }
 }
 
 .user__form {
-  margin: 2rem;
   display: flex;
   justify-content: center;
+  margin: 2rem;
 }
 
 .user__input {

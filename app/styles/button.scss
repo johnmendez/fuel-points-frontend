@@ -1,6 +1,11 @@
 .input-container {
   display: flex;
   align-items: baseline;
+
+  &__route {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 
 .btn-home {
@@ -9,7 +14,7 @@
 }
 
 .btn {
-  width: 10rem;
+  width: 12rem;
   margin: 1rem;
   padding: 1rem;
   border: 0.1rem solid $c-primary;
@@ -22,7 +27,7 @@
 
   &:hover {
     transition: 0.6s ease;
-    background: $c-primary;
+    background: $c-steel-teal;
     color: $c-white;
     opacity: 0.7;
   }
@@ -30,8 +35,7 @@
 
 .destination-btn {
   width: 6rem;
-  height: 2rem;
-  margin: 1rem;
+  height: 3rem;
   border: 0.1rem solid $c-primary;
   border-radius: 0.2rem;
   outline: none;
@@ -41,9 +45,63 @@
   text-align: center;
 
   &:hover {
-    transition: 0.6s ease;
-    background: $c-primary;
+    transition: 0.1s ease;
+    background: $c-steel-teal;
     color: $c-white;
     opacity: 0.7;
   }
+}
+
+.field {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 20rem;
+  margin: 0 auto;
+  padding: 0.5rem;
+  border: 0;
+  border-radius: 0.5rem;
+  outline: none;
+  background: $c-warm-black;
+  color: $c-white;
+  font-size: 1.3rem;
+  text-align: center;
+  opacity: 0.7;
+
+  input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 20rem;
+    margin: 0 auto;
+    padding: 0.5rem;
+    border: 0;
+    border-radius: 0.5rem;
+    outline: none;
+    background: $c-warm-black;
+    color: $c-white;
+    font-size: 1.3rem;
+    text-align: center;
+    opacity: 0.7;
+  }
+}
+
+.field-go-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 20rem;
+  margin: 0 auto;
+  padding: 0.5rem;
+  border: 0.1rem solid $c-steel-teal;
+  border-radius: 0.5rem;
+  outline: none;
+  background: $c-white;
+  color: $c-warm-black;
+  font-size: 1.3rem;
+  text-align: center;
+  opacity: 0.7;
 }
