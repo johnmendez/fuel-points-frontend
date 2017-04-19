@@ -16,9 +16,9 @@
   border-radius: 0.2rem;
   outline: none;
   background: none;
+  color: $c-warm-black;
   font-size: 1.3rem;
   text-align: center;
-  color: black;
 
   &:hover {
     transition: 0.6s ease;
@@ -36,7 +36,8 @@
   border-radius: 0.2rem;
   outline: none;
   background: none;
-  font-size: 1rem;
+  color: $c-warm-black;
+  font-size: 1.3rem;
   text-align: center;
 
   &:hover {

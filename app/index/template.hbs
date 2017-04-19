@@ -12,6 +12,7 @@
   </div>
 
   <div class="section">
+
     <form {{action 'search' on='submit'}} class="destination">
       <div class="input-container__route">
         <div class="input-container__input">
@@ -23,11 +24,15 @@
         <div class="input-container__input">
           {{input class="field destination__input" value=formValues.price changeset=formValues placeholder="Fuel Price"}}
         </div>
+      </div>
+
+      <div class="input-container__route">
         <div class="input-container__input">
           <button class="field destination-btn">Go</button>
         </div>
       </div>
     </form>
+
     <div class="container">
       <h2 class="join-heading">Route Details</h2>
       <hr>
@@ -122,7 +127,7 @@
       </div>
 
       <div class="btn-home">
-        {{#link-to "register" class="btn"}}Get Started{{/link-to}}
+        {{#link-to "register" class="btn" }}Get Started{{/link-to}}
       </div>
     </div>
   </div>
