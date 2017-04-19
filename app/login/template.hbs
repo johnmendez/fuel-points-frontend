@@ -4,12 +4,12 @@
     {{#with (changeset model validator) as |formValues| }}
       <form class="login__form" {{action 'login' formValues 'authenticators' on='submit'}}>
 
-        <div for="identification" class="field">
-          {{form-input id='identification' value=identification changeset=formValues property="username" label="Username" class="field"}}
+        <div for="identification" class="user__form">
+          {{form-input id='identification' value=identification changeset=formValues property="username" label="Username" class="user__input"}}
         </div>
 
-        <div for="password" class="field">
-          {{form-input id='password' value=password type="password" changeset=formValues property="password" label="Password" class="field"}}
+        <div for="password" class="user__form">
+          {{form-input id='password' value=password type="password" changeset=formValues property="password" label="Password" class="user__input"}}
         </div>
 
         <div class="btn-field">
