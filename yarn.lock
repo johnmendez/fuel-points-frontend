@@ -2672,6 +2672,15 @@ ember-ajax@^2.4.1:
   dependencies:
     ember-cli-babel "^5.1.5"
 
+ember-basic-dropdown@^0.31.4:
+  version "0.31.4"
+  resolved "https://registry.yarnpkg.com/ember-basic-dropdown/-/ember-basic-dropdown-0.31.4.tgz#9bc8f06e5ee9508d225592e2513bab29ac481c03"
+  dependencies:
+    ember-cli-babel "^6.0.0-alpha.9"
+    ember-cli-htmlbars "^1.1.1"
+    ember-native-dom-helpers "^0.3.8"
+    ember-wormhole "^0.5.1"
+
 ember-browserify@^1.1.13:
   version "1.1.13"
   resolved "https://registry.yarnpkg.com/ember-browserify/-/ember-browserify-1.1.13.tgz#df74eea4adf4694e8c364222f9c5fd605000930b"
@@ -2736,7 +2745,7 @@ ember-cli-babel@^5.1.10, ember-cli-babel@^5.1.3, ember-cli-babel@^5.1.5, ember-c
     ember-cli-version-checker "^1.0.2"
     resolve "^1.1.2"
 
-ember-cli-babel@^6.0.0-beta.3, ember-cli-babel@^6.0.0-beta.7, ember-cli-babel@^6.0.0-beta.9:
+ember-cli-babel@^6.0.0-alpha.9, ember-cli-babel@^6.0.0-beta.3, ember-cli-babel@^6.0.0-beta.4, ember-cli-babel@^6.0.0-beta.5, ember-cli-babel@^6.0.0-beta.7, ember-cli-babel@^6.0.0-beta.9:
   version "6.0.0-beta.9"
   resolved "https://registry.yarnpkg.com/ember-cli-babel/-/ember-cli-babel-6.0.0-beta.9.tgz#b597d52f12d4429cd5716b55f749ebf6144b7b16"
   dependencies:
@@ -2817,7 +2826,7 @@ ember-cli-htmlbars-inline-precompile@^0.4.0-beta.2:
     ember-cli-version-checker "^1.2.0"
     hash-for-dep "^1.0.2"
 
-ember-cli-htmlbars@^1.0.0, ember-cli-htmlbars@^1.0.1, ember-cli-htmlbars@^1.0.10, ember-cli-htmlbars@^1.0.3, ember-cli-htmlbars@^1.0.5, ember-cli-htmlbars@^1.1.1:
+ember-cli-htmlbars@^1.0.0, ember-cli-htmlbars@^1.0.1, ember-cli-htmlbars@^1.0.10, ember-cli-htmlbars@^1.0.3, ember-cli-htmlbars@^1.0.5, ember-cli-htmlbars@^1.1.1, ember-cli-htmlbars@^1.2.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/ember-cli-htmlbars/-/ember-cli-htmlbars-1.3.0.tgz#e090f011239153bf45dab29625f94a46fce205af"
   dependencies:
@@ -3105,6 +3114,14 @@ ember-composable-helpers@^1.1.2:
     broccoli-funnel "^1.0.1"
     ember-cli-babel "^5.1.7"
 
+ember-concurrency@^0.8.1:
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/ember-concurrency/-/ember-concurrency-0.8.1.tgz#28f4e05d1afe15f9d8611f37a87a59ce8c21a331"
+  dependencies:
+    ember-cli-babel "^6.0.0-beta.5"
+    ember-getowner-polyfill "^1.1.0"
+    ember-maybe-import-regenerator "^0.1.5"
+
 ember-cookies@^0.0.13:
   version "0.0.13"
   resolved "https://registry.yarnpkg.com/ember-cookies/-/ember-cookies-0.0.13.tgz#18350df766240793d46744e4ee5c9a55ae6b4e0a"
@@ -3268,6 +3285,22 @@ ember-math-helpers@~2.0.5:
   dependencies:
     ember-cli-babel "^5.1.7"
 
+ember-maybe-import-regenerator@^0.1.5:
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/ember-maybe-import-regenerator/-/ember-maybe-import-regenerator-0.1.6.tgz#35d41828afa6d6a59bc0da3ce47f34c573d776ca"
+  dependencies:
+    broccoli-funnel "^1.0.1"
+    broccoli-merge-trees "^1.0.0"
+    ember-cli-babel "^6.0.0-beta.4"
+    regenerator-runtime "^0.9.5"
+
+ember-native-dom-helpers@^0.3.8:
+  version "0.3.9"
+  resolved "https://registry.yarnpkg.com/ember-native-dom-helpers/-/ember-native-dom-helpers-0.3.9.tgz#d6f3c8fe62cbf98430116f02339942331bcfa4b4"
+  dependencies:
+    broccoli-funnel "^1.1.0"
+    ember-cli-babel "^6.0.0-beta.9"
+
 ember-network@^0.3.0:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/ember-network/-/ember-network-0.3.1.tgz#4187988fc817d194a722039806518409d2dd72ab"
@@ -3279,6 +3312,25 @@ ember-network@^0.3.0:
     ember-cli-babel "^5.1.5"
     node-fetch "^1.3.3"
     whatwg-fetch "^0.11.0"
+
+ember-power-select-typeahead@^0.5.8:
+  version "0.5.8"
+  resolved "https://registry.yarnpkg.com/ember-power-select-typeahead/-/ember-power-select-typeahead-0.5.8.tgz#385aaab22f3cf18818a3c60f78686585ead2d9cf"
+  dependencies:
+    ember-cli-babel "^6.0.0-beta.9"
+    ember-cli-htmlbars "^1.2.0"
+    ember-power-select "^1.7.0"
+
+ember-power-select@^1.7.0:
+  version "1.7.2"
+  resolved "https://registry.yarnpkg.com/ember-power-select/-/ember-power-select-1.7.2.tgz#d73da0f1dca8c5bd970dbf5ce29b81af7faff6a7"
+  dependencies:
+    ember-basic-dropdown "^0.31.4"
+    ember-cli-babel "^6.0.0-beta.9"
+    ember-cli-htmlbars "^1.1.1"
+    ember-concurrency "^0.8.1"
+    ember-text-measurer "^0.3.3"
+    ember-truth-helpers "^1.3.0"
 
 ember-qunit@^2.0.0-beta.1:
   version "2.1.2"
@@ -3404,6 +3456,12 @@ ember-test-helpers@^0.6.0-beta.1:
   version "0.6.3"
   resolved "https://registry.yarnpkg.com/ember-test-helpers/-/ember-test-helpers-0.6.3.tgz#f864cdf6f4e75f3f8768d6537785b5ab6e82d907"
 
+ember-text-measurer@^0.3.3:
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/ember-text-measurer/-/ember-text-measurer-0.3.3.tgz#0762809a71c2e1f2e60ab00c53c6eb1b63c9f963"
+  dependencies:
+    ember-cli-babel "^5.1.6"
+
 ember-toggle-helper@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/ember-toggle-helper/-/ember-toggle-helper-0.1.1.tgz#49a83362cdf3493629c421bf621e3aaae0d3cb5e"
@@ -3416,7 +3474,7 @@ ember-truth-helpers@1.2.0:
   dependencies:
     ember-cli-babel "^5.1.5"
 
-ember-truth-helpers@1.3.0:
+ember-truth-helpers@1.3.0, ember-truth-helpers@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/ember-truth-helpers/-/ember-truth-helpers-1.3.0.tgz#6ed9f83ce9a49f52bb416d55e227426339a64c60"
   dependencies:
@@ -3459,7 +3517,7 @@ ember-welcome-page@^3.0.0:
     ember-cli-babel "^6.0.0-beta.9"
     ember-cli-htmlbars "^1.0.3"
 
-ember-wormhole@0.5.1:
+ember-wormhole@0.5.1, ember-wormhole@^0.5.1:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/ember-wormhole/-/ember-wormhole-0.5.1.tgz#f2a6fff13b1c037ffa83b2c9291d8b5978878e5b"
   dependencies:
@@ -6572,6 +6630,10 @@ regenerate@^1.2.1:
 regenerator-runtime@^0.10.0:
   version "0.10.3"
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.10.3.tgz#8c4367a904b51ea62a908ac310bf99ff90a82a3e"
+
+regenerator-runtime@^0.9.5:
+  version "0.9.6"
+  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.9.6.tgz#d33eb95d0d2001a4be39659707c51b0cb71ce029"
 
 regenerator-transform@0.9.11:
   version "0.9.11"
