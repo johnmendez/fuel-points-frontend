@@ -44,7 +44,7 @@
               <div>
                 <p>Model</p>
                 <p>
-                  {{#power-select-typeahead disabled=(empty formValues.year) disabled=(empty formValues.make) search=(action 'searchModel' formValues.year) selected=formValues.model onchange=(action (mut formValues.model)) as |model|}}
+                  {{#power-select-typeahead disabled=(empty formValues.year) disabled=(empty formValues.make) search=(action 'searchModel' formValues.year formValues.make) selected=formValues.model onchange=(action (mut formValues.model)) as |model|}}
                     {{model}}
                   {{/power-select-typeahead}}
                 </p>
@@ -52,8 +52,8 @@
               <div>
                 <p>Options</p>
                 <p>
-                  {{#power-select-typeahead disabled=(empty formValues.year) disabled=(empty formValues.make) disabled=(empty formValues.model) search=(action 'searchOptions' formValues.year) selected=formValues.options onchange=(action (mut formValues.options)) as |options|}}
-                    {{options}}
+                  {{#power-select-typeahead disabled=(empty formValues.year) disabled=(empty formValues.make) disabled=(empty formValues.model) search=(action 'searchOptions' formValues.year formValues.make formValues.model) selected=formValues.options extra=(hash labelPath="text") onchange=(action (mut formValues.options)) as |options|}}
+                    {{options.text}}
                   {{/power-select-typeahead}}
                 </p>
               </div>

@@ -44,7 +44,7 @@ export default Ember.Controller.extend({
     searchModel(year, make, query) {
       const filter = new RegExp(query, 'i');
 
-      return fetch(`http://localhost:8080/makes?year=${year}`, {
+      return fetch(`http://localhost:8080/models?make=${make}&year=${year}`, {
         headers: {
           Authorization: `Bearer ${this.get('token')}`
         },
@@ -55,12 +55,11 @@ export default Ember.Controller.extend({
     searchOptions(year, make, model, query) {
       const filter = new RegExp(query, 'i');
 
-      return fetch(`http://localhost:8080/makes?year=${year}`, {
+      return fetch(`http://localhost:8080/options?make=${make}&year=${year}&model=${model}`, {
         headers: {
           Authorization: `Bearer ${this.get('token')}`
         },
-      }).then(r => r.json())
-      .then(results => results.filter(r => r.match(filter)));
+      }).then(r => r.json());
     },
 
   }

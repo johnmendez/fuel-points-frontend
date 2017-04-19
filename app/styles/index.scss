@@ -25,7 +25,7 @@
 
 
 .join {
-  background: $c-honeydew;
+  background: $c-white;
 }
 
 .leaflet-container {
@@ -34,7 +34,7 @@
 
   & a {
     background: none;
-    color: $c-honeydew;
+    color: $c-white;
     opacity: 1;
 }
 }
@@ -47,11 +47,7 @@
 
 .destination__input {
   background: $c-warm-black;
-  color: $c-honeydew;
-}
-
-.placeholder {
-  color: $c-steel-teal;
+  color: $c-white;
 }
 
 .subscribe {
@@ -75,12 +71,12 @@
   border-radius: 0.2rem;
   outline: none;
   background: none;
-  color: $c-honeydew;
+  color: $c-white;
   font-size: 1rem;
 
   &:hover {
     transition: 0.6s ease;
     background: $c-primary;
-    color: $c-honeydew;
+    color: $c-white;
   }
 }

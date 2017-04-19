@@ -1,12 +1,20 @@
 table {
-  width: 100%;
-  margin-bottom: 2rem;
+  width: 90%;
+  margin: 2rem;
+  justify-content: center;
+}
+
+td {
+  padding: 2rem;
+}
+
+th {
+  color: $c-primary;
 }
 
 table,
 th,
 td {
-  //border: 0.1rem solid $c-primary;
   border: none;
   text-align: center;
   border-collapse: collapse;
