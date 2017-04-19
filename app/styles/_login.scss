@@ -20,7 +20,7 @@
   justify-content: center;
 }
 
-input {
+.field {
   background: $c-primary;
   border-radius: .5rem;
   border: 0;
@@ -33,6 +33,12 @@ input {
   opacity: .7;
   font-size: 1.3rem;
   text-align: center;
+}
+
+.input-container__input {
+  &--fullwidth {
+    width: 100%;
+  }
 }
 
 .btn-field {

@@ -15,16 +15,16 @@
     <form {{action 'search' on='submit'}} class="destination">
       <div class="input-container__route">
         <div class="input-container__input">
-          {{input class="destination__input" value=formValues.origin changeset=formValues placeholder="Origin"}}
+          {{input class="field destination__input" value=formValues.origin changeset=formValues placeholder="Origin"}}
         </div>
         <div class="input-container__input">
-          {{input class="destination__input" value=formValues.destination changeset=formValues placeholder="Destination"}}
+          {{input class="field destination__input" value=formValues.destination changeset=formValues placeholder="Destination"}}
         </div>
         <div class="input-container__input">
-          {{input class="destination__input" value=formValues.price changeset=formValues placeholder="Fuel Price"}}
+          {{input class="field destination__input" value=formValues.price changeset=formValues placeholder="Fuel Price"}}
         </div>
         <div class="input-container__input">
-          <button class="destination-btn">Go</button>
+          <button class="field destination-btn">Go</button>
         </div>
       </div>
     </form>
