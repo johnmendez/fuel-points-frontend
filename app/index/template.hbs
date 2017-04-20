@@ -52,10 +52,12 @@
               <td>{{vehicle.year}} {{vehicle.make}} {{vehicle.model}}</td>
             {{/with}}
 
-            <td>{{trip.miles}}mi</td>
+
+            <td>{{format-fixed trip.miles 1}}mi</td>
+
             <td>{{trip.time}}</td>
-            <td>${{trip.totalFuelPrice}}</td>
-            <td>{{trip.emissions}}</td>
+            <td>${{format-fixed trip.totalFuelPrice 2}}</td>
+            <td>{{format-fixed trip.emissions 2}}</td>
           </tr>
         {{/each}}
       </table>
