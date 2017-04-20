@@ -4,18 +4,16 @@
       <div class="ma-card__header">
         <h2>My Vehicles</h2>
       </div>
+
       <ul class="ma-card__list">
-        {{#each model as |vehicles|}}
+        {{#each model as |vehicle|}}
           <li class="ma-card__list-item">
-            Ex.Make Ex.Model Ex.Year {{vehicles.year}}, {{vehicles.make}}, {{vehicles.model}}
-            <button class="delete-btn" type="button" name="button">Delete</button>
-          </li>
-          <li class="ma-card__list-item">
-            Ex.Make Ex.Model Ex.Year {{vehicles.year}}, {{vehicles.make}}, {{vehicles.model}}
-            <button class="delete-btn" type="button" name="button">Delete</button>
+            Year: {{vehicle.year}}, Make: {{vehicle.make}}, Model: {{vehicle.model}}
           </li>
         {{/each}}
       </ul>
+      <button {{action 'delete'}} class="btn delete-btn" type="button" name="button">Delete</button>
+
       <hr>
       <div class="ma-card__header">
         <h2>Add Vehicle</h2>
