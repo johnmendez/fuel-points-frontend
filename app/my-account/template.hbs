@@ -4,25 +4,23 @@
       <div class="ma-card__header">
         <h2>My Vehicles</h2>
       </div>
+
       <ul class="ma-card__list">
-        {{#each model as |vehicles|}}
+        {{#each model as |vehicle|}}
           <li class="ma-card__list-item">
-            Ex.Make Ex.Model Ex.Year {{vehicles.year}}, {{vehicles.make}}, {{vehicles.model}}
-            <button class="delete-btn" type="button" name="button">Delete</button>
-          </li>
-          <li class="ma-card__list-item">
-            Ex.Make Ex.Model Ex.Year {{vehicles.year}}, {{vehicles.make}}, {{vehicles.model}}
-            <button class="delete-btn" type="button" name="button">Delete</button>
+            Year: {{vehicle.year}}, Make: {{vehicle.make}}, Model: {{vehicle.model}}
+            <button {{action 'delete' vehicle}} class="btn delete-btn" type="button" name="button">Delete</button>
           </li>
         {{/each}}
       </ul>
+
       <hr>
       <div class="ma-card__header">
         <h2>Add Vehicle</h2>
       </div>
 
       {{#with (changeset formValues) as |formValues|}}
-        <form class="add-vehicle" {{action 'createRecord' on='submit'}}>
+        <form class="add-vehicle" {{action 'createRecord' formValues on='submit'}}>
           <div class="input-container">
             <div class="input-container__input input-container__input--fullwidth">
               <div>
@@ -61,7 +59,7 @@
           </div>
           <div class="input-container">
             <div class="add-vehicle-btn">
-              <button type="button" name="button" class="btn add-vehicle__button">Submit</button>
+              <button type="submit" name="button" class="btn add-vehicle__button">Submit</button>
             </div>
           </div>
         </form>

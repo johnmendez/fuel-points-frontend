@@ -1,6 +1,6 @@
 import { moduleForModel, test } from 'ember-qunit';
 
-moduleForModel('direction-result', 'Unit | Model | direction result', {
+moduleForModel('direction-response', 'Unit | Model | direction result', {
   // Specify the other units that are required for this test.
   needs: []
 });

@@ -6,8 +6,16 @@ export default Ember.Controller.extend({
   formValues: {},
 
   actions: {
-    createRecord() {
-      const car = this.store.createRecord('vehicles', this.formValues);
+    createRecord(changeset) {
+      changeset.save();
+
+      const car = this.store.createRecord('vehicle', {
+        year: this.formValues.year,
+        make: this.formValues.make,
+        model: this.formValues.model,
+        options: this.formValues.options.text,
+        fuelEconomyId: this.formValues.options.value,
+      });
 
       car.save().then(() => {
         this.set('formValues', {});
@@ -15,7 +23,7 @@ export default Ember.Controller.extend({
       });
     },
 
-    deleteCar(car) {
+    delete(car) {
       car.destroyRecord();
     },
 

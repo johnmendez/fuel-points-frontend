@@ -1,19 +1,25 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  lat: 45.519743,
-  lng: -122.680522,
+  session: Ember.inject.service('session'),
+
+  lat: 35,
+  lng: -85,
   zoom: 6,
 
   actions: {
     updateCenter(e) {
-      let center = e.target.getCenter();
+      const center = e.target.getCenter();
       this.set('lat', center.lat);
       this.set('lng', center.lng);
     },
 
+    invalidateSession() {
+      this.get('session').invalidate();
+    },
+
     async search(changeset) {
-      const result = await this.store.queryRecord('direction-result', {
+      const result = await this.store.queryRecord('direction-response', {
         origin: this.formValues.origin,
         destination: this.formValues.destination,
         price: this.formValues.price,
