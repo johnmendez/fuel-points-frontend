@@ -1,15 +1,16 @@
 <div class="home-content">
+  {{!-- {{#if session.isAuthenticated}}
+    <h2 class="join-heading">You are logged in.</h2>
+  {{else}}
+    <h2 class="join-heading">You are logged out.</h2>
+  {{/if}} --}}
 
   <div class="leaflet-container">
-
-    {{log model}}
-
     {{#leaflet-map lat=model.json.routes.firstObject.bounds.northeast.lat lng=model.json.routes.firstObject.bounds.northeast.lng zoom=zoom scrollWheelZoom=false onMoveend=(action "updateCenter")}}
       {{#each model.json.routes as |value|}}
         {{google-route route=value}}
       {{/each}}
-
-      {{tile-layer url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}} -
+      {{tile-layer url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png" }} -
     {{/leaflet-map}}
   </div>
 
@@ -34,7 +35,6 @@
         </div>
       </div>
     </form>
-
     <div class="container">
       <h2 class="join-heading">Route Details</h2>
       <hr>
@@ -84,8 +84,7 @@
   <div class="section">
     <div class="container">
 
-      {{!-- <h2 class="join-heading">Data from our users</h2>
-
+      <h2 class="join-heading">Data from our users</h2>
       <div class="grid">
         <div class="grid__item">
           <div class="card">
@@ -93,21 +92,19 @@
             <h2>86,000 drivers</h2>
           </div>
         </div>
-
         <div class="grid__item">
           <div class="card">
             <div class="fa fa-tree card__icon" aria-hidden="true"></div>
             <h2>1,000,000 trees saved</h2>
           </div>
         </div>
-
         <div class="grid__item">
           <div class="card">
             <div class="fa fa-road card__icon" aria-hidden="true"></div>
             <h2>42,000,000 miles travelled</h2>
           </div>
         </div>
-      </div> --}}
+      </div>
 
       <div class="btn-home">
         {{#link-to "register" class="btn" }}Get Started{{/link-to}}
@@ -115,5 +112,3 @@
     </div>
   </div>
 </div>
-
-{{outlet}}
