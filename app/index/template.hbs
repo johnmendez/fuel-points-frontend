@@ -48,11 +48,13 @@
         </tr>
         {{#each model.tripsWithVehicleOne as |trip|}}
           <tr>
-            {{#with model.tripsWithVehicleOne.firstObject.vehicle as |vehicle|}}
+            {{#with trip.vehicle as |vehicle|}}
               <td>{{vehicle.year}} {{vehicle.make}} {{vehicle.model}}</td>
             {{/with}}
 
+
             <td>{{format-fixed trip.miles 1}}mi</td>
+
             <td>{{trip.time}}</td>
             <td>${{format-fixed trip.totalFuelPrice 2}}</td>
             <td>{{format-fixed trip.emissions 2}}</td>
