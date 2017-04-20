@@ -23,7 +23,7 @@ export default Ember.Controller.extend({
       });
     },
 
-    deleteCar(car) {
+    delete(car) {
       car.destroyRecord();
     },
 

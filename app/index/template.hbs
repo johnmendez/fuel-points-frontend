@@ -2,7 +2,7 @@
 
   <div class="leaflet-container">
 
-    {{log model.json}}
+    {{log model}}
 
     {{#leaflet-map lat=model.json.routes.firstObject.bounds.northeast.lat lng=model.json.routes.firstObject.bounds.northeast.lng zoom=zoom scrollWheelZoom=false onMoveend=(action "updateCenter")}}
       {{#each model.json.routes as |value|}}
@@ -51,9 +51,12 @@
             {{#with model.tripsWithVehicleOne.firstObject.vehicle as |vehicle|}}
               <td>{{vehicle.year}} {{vehicle.make}} {{vehicle.model}}</td>
             {{/with}}
-            <td>{{trip.totalDistance}}m</td>
-            <td>{{trip.totalDuration}}m</td>
-            <td>{{trip.totalFuelPrice}}m</td>
+
+            {{trip}}
+
+            <td>{{trip.miles}}mi</td>
+            <td>{{trip.time}}</td>
+            <td>${{trip.totalFuelPrice}}</td>
             <td>{{trip.emissions}}</td>
           </tr>
         {{/each}}

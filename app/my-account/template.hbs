@@ -9,7 +9,7 @@
         {{#each model as |vehicle|}}
           <li class="ma-card__list-item">
             Year: {{vehicle.year}}, Make: {{vehicle.make}}, Model: {{vehicle.model}}
-            <button {{action 'delete'}} class="btn delete-btn" type="button" name="button">Delete</button>
+            <button {{action 'delete' vehicle}} class="btn delete-btn" type="button" name="button">Delete</button>
           </li>
         {{/each}}
       </ul>
