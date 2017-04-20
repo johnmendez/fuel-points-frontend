@@ -40,7 +40,7 @@
       <hr>
       <table>
         <tr>
-          {{#with model.tripsWithVehicleOne.firstObject.vehicle as |vehicle|}}
+          {{#with trip.vehicle as |vehicle|}}
             <th>{{vehicle.year}} {{vehicle.make}} {{vehicle.model}}</th>
           {{/with}}
 
