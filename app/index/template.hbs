@@ -68,6 +68,8 @@
   </div>
 </div>
 
+{{#if session.isAuthenticated}}
+{{else}}
 <div class="bg-grass">
   {{!-- <div class="container">
     <div class="subscribe">
@@ -115,3 +117,4 @@
     </div>
   </div>
 </div>
+{{/if}}
