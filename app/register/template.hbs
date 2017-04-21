@@ -1,29 +1,31 @@
-<div class="login">
-  <h2 class="join-heading">With an Account, you'll be able to save car information to track your Co<sub>2</sub> output.</h2>
-  {{#with (changeset model userValidator) as |formValues|}}
-    <form class="login__form" {{action 'saveUser' formValues on='submit'}}>
+<div class="bg-grass">
+  <div class="login">
+    <h2 class="join-heading">With an Account, you'll be able to save car information to track your Co<sub>2</sub> output.</h2>
+    {{#with (changeset model userValidator) as |formValues|}}
+      <form class="login__form" {{action 'saveUser' formValues on='submit'}}>
 
-      <h3>Create a Username</h3>
-      <div class="user__form">
-        {{form-input placeholder='Username' changeset=formValues type="text" property="name" class="field destination__input"}}
-      </div>
-      <h3>Create a Password</h3>
-      <div class="user__form">
-        {{form-input placeholder='Password' changeset=formValues property="password" type="password" class="field destination__input"}}
-      </div>
+        <h3>Create a Username</h3>
+        <div class="user__form">
+          {{form-input placeholder='Username' changeset=formValues type="text" property="name" class="field destination__input"}}
+        </div>
+        <h3>Create a Password</h3>
+        <div class="user__form">
+          {{form-input placeholder='Password' changeset=formValues property="password" type="password" class="field destination__input"}}
+        </div>
 
-      <div class="btn-field">
-        <button type="submit" class="btn btn-primary">Register</button>
+        <div class="btn-field">
+          <button type="submit" class="btn btn-primary">Register</button>
 
-      </div>
-    </form>
-  {{/with}}
+        </div>
+      </form>
+    {{/with}}
 
 
-  {{#if errorMessage}}
-    <p>
-      <strong>Login Failed:</strong>
-      <code>{{errorMessage}}</code>
-    </p>
-  {{/if}}
+    {{#if errorMessage}}
+      <p>
+        <strong>Login Failed:</strong>
+        <code>{{errorMessage}}</code>
+      </p>
+    {{/if}}
+  </div>
 </div>
