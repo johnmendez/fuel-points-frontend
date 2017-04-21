@@ -1,30 +1,32 @@
-<div class="section">
-  <div class="login">
-    {{#with (changeset model validator) as |formValues| }}
-      <form class="login__form" {{action 'login' formValues 'authenticators' on='submit'}}>
-        <h3>Username</h3>
-        <div for="identification" class="input-container__input">
-          {{form-input placeholder='Username' id='identification' value=identification changeset=formValues property="username" class="field destination__input" placeholders="Username"}}
-        </div>
-        <h3>Password</h3>
-        <div for="password" class="input-container__input">
-          {{form-input placeholder='Password' id='password' value=password type="password" changeset=formValues property="password" class="field destination__input" placeholders="Password"}}
-        </div>
+<div class="bg-grass">
+  <div class="section">
+    <div class="login">
+      {{#with (changeset model validator) as |formValues| }}
+        <form class="login__form" {{action 'login' formValues 'authenticators' on='submit'}}>
+          <h3>Username</h3>
+          <div for="identification" class="input-container__input">
+            {{form-input placeholder='Username' id='identification' value=identification changeset=formValues property="username" class="field destination__input" placeholders="Username"}}
+          </div>
+          <h3>Password</h3>
+          <div for="password" class="input-container__input">
+            {{form-input placeholder='Password' id='password' value=password type="password" changeset=formValues property="password" class="field destination__input" placeholders="Password"}}
+          </div>
 
-        <div class="btn-field">
-          <button type="submit" class="btn btn-primary">Login</button>
-          <p class="register-tag">Don't have an Account?
-            {{#link-to 'register' class="register-btn" }} Create one here!{{/link-to}}
-          </p>
-        </div>
-      </form>
-    {{/with}}
+          <div class="btn-field">
+            <button type="submit" class="btn btn-primary">Login</button>
+            <p class="register-tag">Don't have an Account?
+              {{#link-to 'register' class="register-btn" }} Create one here!{{/link-to}}
+            </p>
+          </div>
+        </form>
+      {{/with}}
 
-    {{#if errorMessage}}
-      <p>
-        <strong>Login Failed:</strong>
-        <code>{{errorMessage}}</code>
-      </p>
-    {{/if}}
+      {{#if errorMessage}}
+        <p>
+          <strong>Login Failed:</strong>
+          <code>{{errorMessage}}</code>
+        </p>
+      {{/if}}
+    </div>
   </div>
 </div>
