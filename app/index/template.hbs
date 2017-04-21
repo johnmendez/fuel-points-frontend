@@ -13,57 +13,62 @@
       {{tile-layer url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png" }} -
     {{/leaflet-map}}
   </div>
+  <div class="bg-clouds">
 
-  <div class="section">
 
-    <form {{action 'search' on='submit'}} class="destination">
-      <div class="input-container__route">
-        <div class="input-container__input">
-          {{input class="field destination__input" value=formValues.origin changeset=formValues placeholder="Origin"}}
-        </div>
-        <div class="input-container__input">
-          {{input class="field destination__input" value=formValues.destination changeset=formValues placeholder="Destination"}}
-        </div>
-        <div class="input-container__input">
-          {{input class="field destination__input" value=formValues.price changeset=formValues placeholder="Fuel Price"}}
-        </div>
-      </div>
+    <div class="section">
 
-      <div class="input-container__route">
-        <div class="input-container__input">
-          <button class="field-go-btn destination-btn">Go</button>
+      <form {{action 'search' on='submit'}} class="destination">
+        <div class="input-container__route">
+          <div class="input-container__input">
+            {{input class="field destination__input" value=formValues.origin changeset=formValues placeholder="Origin"}}
+          </div>
+          <div class="input-container__input">
+            {{input class="field destination__input" value=formValues.destination changeset=formValues placeholder="Destination"}}
+          </div>
+          <div class="input-container__input">
+            {{input class="field destination__input" value=formValues.price changeset=formValues placeholder="Fuel Price"}}
+          </div>
         </div>
-      </div>
-    </form>
-    <div class="container">
-      <h2 class="join-heading">Route Details</h2>
-      <hr>
-      <table>
-        <tr>
-          <th><span class="fa fa-car"></span></th>
-          <th>Distance</th>
-          <th>Duration</th>
-          <th>Fuel Cost</th>
-          <th>Emissions</th>
-        </tr>
-        {{#each model.tripsWithVehicleOne as |trip|}}
+
+        <div class="input-container__route">
+          <div class="input-container__input">
+            <button class="field-go-btn destination-btn">Go</button>
+          </div>
+        </div>
+      </form>
+      <div class="container">
+        <h2 class="join-heading">Route Details</h2>
+        <hr>
+        <table>
           <tr>
-            {{#with trip.vehicle as |vehicle|}}
-              <td>{{vehicle.year}} {{vehicle.make}} {{vehicle.model}}</td>
-            {{/with}}
-
-
-            <td>{{format-fixed trip.miles 1}}mi</td>
-
-            <td>{{trip.time}}</td>
-            <td>${{format-fixed trip.totalFuelPrice 2}}</td>
-            <td>{{format-fixed trip.emissions 2}}</td>
+            <th><span class="fa fa-car"></span></th>
+            <th>Distance</th>
+            <th>Duration</th>
+            <th>Fuel Cost</th>
+            <th>Emissions</th>
           </tr>
-        {{/each}}
-      </table>
+          {{#each model.tripsWithVehicleOne as |trip|}}
+            <tr>
+              {{#with trip.vehicle as |vehicle|}}
+                <td>{{vehicle.year}} {{vehicle.make}} {{vehicle.model}}</td>
+              {{/with}}
+
+
+              <td>{{format-fixed trip.miles 1}}mi</td>
+
+              <td>{{trip.time}}</td>
+              <td>${{format-fixed trip.totalFuelPrice 2}}</td>
+              <td>{{format-fixed trip.emissions 2}}</td>
+            </tr>
+          {{/each}}
+        </table>
+      </div>
     </div>
   </div>
+</div>
 
+<div class="bg-grass">
   <div class="container">
     <div class="subscribe">
       <h2 class="join-heading">Go social with your Fuel Points</h2>
@@ -80,7 +85,6 @@
       </div>
     </div>
   </div>
-
   <div class="section">
     <div class="container">
 
