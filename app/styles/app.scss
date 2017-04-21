@@ -57,5 +57,9 @@ $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 .bg-clouds {
   padding: 1rem;
   background: url('/weather.png');
-  // background: url('/ep_naturalblack.png');
+}
+
+.bg-space {
+  background: url('/ep_naturalblack.png');
+  color: $c-honeydew;
 }

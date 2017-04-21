@@ -7,9 +7,9 @@ li {
 }
 
 .textholder {
-  margin: 0 5rem;
-  background: $c-black;
-  color: $c-honeydew;
+  // margin: 0 5rem;
+  // background: $c-black;
+  // color: $c-honeydew;
 
   &__holder {
     padding: 1rem 4rem;
@@ -20,10 +20,6 @@ li {
   padding: 5rem;
   background: url('/Grassy_Hill.jpg');
   background-size: cover;
+  color: $c-honeydew;
   // opacity: 0.7;
-}
-
-.about-heading {
-  border: solid, white, 1rem;
-  color: $c-warm-black;
 }
